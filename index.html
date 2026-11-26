@@ -776,6 +776,51 @@
       .bot-ping { right: 18px; bottom: 84px; }
     }
     @media (prefers-reduced-motion: reduce) { *,*::before,*::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }
+
+    /* Advanced Impactor logo blue */
+    .nav-logo { gap: 0; }
+    .nav-wordmark { display: block; width: 154px; height: auto; }
+    .nav-links a:hover, .nav-brand, .hero h1, .hero h1 .accent, .section-label, .section-title, .feature-title, .visual-copy h2 { color: #078cff; }
+    .hero-tag { color: #078cff; }
+    .hero-tag-dot { background: #078cff; }
+    .nav-cta, .btn-primary { background: #078cff; color: #fff; }
+    .nav-cta:hover, .btn-primary:hover { background: #0672d3; }
+    .btn-ghost { border-color: rgba(7,140,255,.3); color: #0672d3; }
+    .btn-ghost:hover { border-color: #078cff; color: #0672d3; }
+    .hero-visual { background: #071a31; }
+    .hero-visual::before { border-color: rgba(7,140,255,.18); box-shadow: 0 0 0 34px rgba(7,140,255,.045),0 0 0 72px rgba(7,140,255,.03); }
+    .visual-topbar { border-color: rgba(7,140,255,.25); }
+    .visual-tag { border-color: rgba(7,140,255,.45); color: #75bdff; }
+    .visual-copy small, .event-index { color: #75bdff; }
+    .event-index { border-color: rgba(7,140,255,.5); }
+    .stat-value { color: #078cff; }
+    .stat-value span { color: #078cff; }
+    .feature-card:hover { border-color: rgba(7,140,255,.48); }
+    .feature-icon { background: rgba(7,140,255,.08); border-color: rgba(7,140,255,.2); }
+    .feature-icon svg * { stroke: #078cff; }
+    .feature-icon svg circle[fill] { fill: #078cff; }
+    .assistant-callout { background: #071a31; border-color: #071a31; }
+    .assistant-callout .feature-title { color: #078cff; }
+    .assistant-callout .btn-primary { background: #078cff; color: #fff; }
+    .bot-ping { border-color: rgba(7,140,255,.35); background: #071a31; }
+    .bot-ping::after { border-color: rgba(7,140,255,.35); background: #071a31; }
+    .bot-trigger { background: #078cff; box-shadow: 0 9px 26px rgba(7,83,151,.27); }
+    .bot-trigger:hover { background: #0672d3; }
+    .bot-trigger svg path { fill: #fff; stroke: #fff; }
+    .bot-trigger svg circle { fill: #078cff; }
+    .chat-header { background: #071a31; border-color: rgba(7,140,255,.2); }
+    .chat-avatar { background: #078cff; }
+    .chat-avatar svg path { fill: #fff; }
+    .chat-header-name { color: #75bdff; }
+    .chat-header-status { color: #d2dfec; }
+    .status-dot, .typing-dots span { background: #078cff; }
+    .msg.user, .send-btn { background: #078cff; }
+    .msg.user { color: #fff; }
+    .send-btn:hover { background: #0672d3; }
+    .chip { border-color: rgba(7,140,255,.22); background: rgba(7,140,255,.07); color: #0672d3; }
+    .chip:hover { background: rgba(7,140,255,.13); }
+    .answer-source { color: #0672d3; }
+    .chat-input:focus { border-color: #078cff; }
   </style>
 </head>
 <body>
@@ -785,8 +830,7 @@
 
   <nav>
     <a href="#top" class="nav-logo" aria-label="Advanced Impactor home">
-      <div class="logo-mark"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="8" stroke="white" stroke-width="1.5"/><path d="M7 10L10 7l3 3-3 4z" fill="white"/></svg></div>
-      <span class="nav-brand">Advanced Impactor</span>
+      <img class="nav-wordmark" src="assets/advanced-impactor-logo.svg" alt="Advanced Impactor" />
     </a>
     <ul class="nav-links">
       <li><a href="#features">Capabilities</a></li>

@@ -1,0 +1,13 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 64" role="img" aria-labelledby="title">
+  <title id="title">Advanced Impactor</title>
+  <g fill="#078cff">
+    <rect x="6" y="19" width="6" height="39" rx="3"/>
+    <rect x="17" y="17" width="6" height="41" rx="3"/>
+    <rect x="28" y="28" width="6" height="30" rx="3"/>
+    <circle cx="31" cy="12" r="4"/>
+    <path d="M39 15h5" stroke="#078cff" stroke-width="3" stroke-linecap="round"/>
+  </g>
+  <text x="46" y="27" fill="#078cff" font-family="Arial, sans-serif" font-size="10" font-style="italic">Advanced</text>
+  <text x="45" y="48" fill="#078cff" font-family="Arial, sans-serif" font-size="17" font-weight="700" letter-spacing="-.65">IMPACTOR</text>
+  <path d="M45 54.5h108" stroke="#078cff" stroke-width="1.6"/>
+</svg>
