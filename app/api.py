@@ -8,6 +8,7 @@ from typing import Literal
 from fastapi import FastAPI, HTTPException
 from fastapi.middleware.cors import CORSMiddleware
 from fastapi.responses import FileResponse
+from fastapi.staticfiles import StaticFiles
 from pydantic import BaseModel, Field
 
 from app.rag import answer_question, load_vectorstore, sync_vectorstore
@@ -23,6 +24,7 @@ app.add_middleware(
     allow_methods=["*"],
     allow_headers=["*"],
 )
+app.mount("/assets", StaticFiles(directory=BASE_DIR / "assets"), name="assets")
 
 
 def _initialize_index():
@@ -57,6 +59,11 @@ class Query(BaseModel):
 @app.get("/")
 def home():
     return FileResponse(INDEX_FILE)
+
+
+@app.get("/api-config.js")
+def api_config():
+    return FileResponse(BASE_DIR / "api-config.js", media_type="application/javascript")
 
 
 @app.get("/health")
