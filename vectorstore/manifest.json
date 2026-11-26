@@ -1,0 +1,477 @@
+{
+  "version": 2,
+  "sources": {
+    "company_knowledge/business/business_analysis.md": {
+      "sha256": "03f762262de4a9290e158d7f335b40ae4fe6cd0927e36e5a7bd5c8e8b4026482",
+      "ids": [
+        "e07b149c0779b6716a7b43d507e2078861bf30ac8b83ee6ff7699ed491508837",
+        "cec7392451ebbdedebe54f3eaa11b41131fe323f736e8ad01d6b99c5bb91a4c9",
+        "67b3f0e4db48b4a06d37256e641bf8af30a81737441d5dbefd943f7326c263c0",
+        "64debd9ab86834dd5a615c0b0be5b747a5bd9ad063fc51a6da04ce1b484a0a9a"
+      ]
+    },
+    "company_knowledge/business/marketing_and_positioning.md": {
+      "sha256": "5157221558eb85af8f12cca09987e5af6f4cb1e1106582ed7a390779c86d64b0",
+      "ids": [
+        "3bdad045bc5a3ab4aff8f5591daf6eadba8beff3df36c399124615c24288eb23",
+        "4c6281ac69638acc033eff8ddfd30043a17d63541bb82eb96f3b8b7b98037b60",
+        "443c67e27801a0ab02640692deb1edab8f80662859b02903fcf7aa00be53b66c",
+        "2ffa03c341282b4ffefb13791647f2dff44376bb389098f8e4b44a3273d2e0ec"
+      ]
+    },
+    "company_knowledge/business/partnerships.md": {
+      "sha256": "bfbfad2dcb8eec7ce513abf10f990df4447a96fea8ad38360170aed3d600cdb5",
+      "ids": [
+        "268ebc0c885e1c1ad5e84978787edee7558a852757e9badd803063ca7ef2b00a",
+        "e619745b8128e4866ed00dbcc66cc12a5a105a7358fae3635f3ccfce6255a0be",
+        "6bdde40a5040a00cd24ef1e2f3065f2e88950561619471725c58cf029adcaab1",
+        "50d50686666e140f497eea96d773e88d977e4aae2e837c0486f2939be0ae51e5"
+      ]
+    },
+    "company_knowledge/business/product_launches.md": {
+      "sha256": "18be943c35ef8d5925c8f060a90a53334c197c298c4ac8b8302a002b94c5aad6",
+      "ids": [
+        "aa74dd77a807ab778a88cb0a2729ea5ccae1140510c74c96ac318b57f24d971e",
+        "9ffd6059848f27312743f5fee25aa7f1b4c5129290f9748cb7b829bac956c6d5",
+        "3c9dcaae3251146174a68ff7d0886568bb39bd223583f79982293bc5e854400b",
+        "f3080aef6e58f7084ca5937af31872a923b7813851e1f72e31a1527963a5e2db"
+      ]
+    },
+    "company_knowledge/company_overview.md": {
+      "sha256": "1dc827453e648ff59259c766d2eec07fd2c1680863465d7b02cba021bc78839f",
+      "ids": [
+        "df86ffa192f0aee590727e57f100b1c1523724afc4bd368fbd8d4dbfa5eec72b",
+        "4d55bd690a6863ae4d13701aa1573ea0ac1237597584e0441b699fe6ab914d59",
+        "07c177000fc0bb0a61ffae18db34ac7c7e42871f4a47fb42767cea21b2b94590",
+        "d81d307ba77479f4b28f3035d8e1a2e20fa11eeaa7ffa4e0ba28ac8a1ac31e82"
+      ]
+    },
+    "company_knowledge/documentation/faq.md": {
+      "sha256": "c4c6c7117abd44d7bf65f0e63e48cb57bf7456ba27e92f828f8d30cf2d6b12cf",
+      "ids": [
+        "d1a3137f99840511eaec9a163f9155c206b57bdb72aa44cd84c963e368299779",
+        "3ad8c57181463e187599496528f26a60fbd0ab0be48aac5696bbf83f4d5ac88f",
+        "feb28d3c5fb8a752e7cbd0f56c36ac587ffd669aefe8e667fe73bbb5158a83c4",
+        "4a806b9f00a6af0843434e0312bf7ea8f6ba3cbeb4f49b83eb7d06aaa042303d",
+        "c97430159560866c8661407fb101b84ee6ca3268d48968335781311565ca0a1f",
+        "6625af7e1b485f12f41c59126d836118f03abc53fff4d1943ede009cecc67958",
+        "4ddf442e3252d3128d27be4a40455b61d703707fe942fadccdc22295b6b5ac9d"
+      ]
+    },
+    "company_knowledge/documentation/terminology.md": {
+      "sha256": "26cf3ca7e442aca50ae5627a95d04901bdcd2c371b988f9aabf0ba8567152f53",
+      "ids": [
+        "71b989e13b595c001e951e656f722bf819b38722f17242fd6b44f3f261c8d344",
+        "fa4136a7edee6872335196a4fdbbd6fbd2acd23243aea42e50bd9430a85bf65c"
+      ]
+    },
+    "company_knowledge/features/3d_trajectory.md": {
+      "sha256": "b4f55d4f476cec1d40923bc6761ad07cc4ebf1a31b4a4b8ad2cde79c5d93319b",
+      "ids": [
+        "0db5c19e69438f086dfde9a0502400e8f1be41494fd0835a03c6380728d8a6b6",
+        "d668e961a86b49877129c24e1611620b8b82217a8de7f037d62b5ba81a7c7d90",
+        "69d4b4806785ea4769ecef44b81633dc31eb50c12ecb46a4eae1f748078b03fc"
+      ]
+    },
+    "company_knowledge/features/academy_management.md": {
+      "sha256": "888d7949d41541772cd335ed34e51f0de6910a6dbcd5d55f41492a0f319fd147",
+      "ids": [
+        "25f4beffa4c7bfe8dffdc667ef268a269f69dd6f90379fb6697b5a19446c849c",
+        "bd001f53417041868da1b50d5bbf4c9f8d6f62c0f2eb2c46bb67e7361f7a0bc6",
+        "d20088bf0f0ff6f94708592e783580cc6c328ef36b746f1d5350b45dacc100b2",
+        "af4e9ab7ee502759410d1170c5950717ed841c07d569266299f16a0731620ab3"
+      ]
+    },
+    "company_knowledge/features/ai_reports.md": {
+      "sha256": "a0e74bd485820457fe915623957fdd20064a6d14f4959a647dd94ac21ac5030f",
+      "ids": [
+        "c474640202a94a72a304b1353e430b2da82dc51c924e1750b4ab3cbda81af267",
+        "496e745d5e37b5f93b5403de2066c44d45339bda5d0fa9269798f86ae3709cdd",
+        "c672ee416f5a66f61ac0cee4d78ca68332727c6f65750e99592a8374136a4b26"
+      ]
+    },
+    "company_knowledge/features/ball_tracking.md": {
+      "sha256": "5d591d94c05c14f0e24ade54b0e323d6ee469d89a21020034cc8c66207186f5d",
+      "ids": [
+        "10d28289f8b860d0647c13d3ca5d4247cee56dca778dc754957739bc5821ccea",
+        "a31c563bf9236e7ccd06ec29cce51ca574b26ef7fbe8692e9e2b470652e47436",
+        "0b8e0932ced2cf097850b061f9d01fce8c6bb11b59c0ba85d5e5b47506944b9a"
+      ]
+    },
+    "company_knowledge/features/batting_analysis.md": {
+      "sha256": "08135f0ed766c048bfd4d3d4a2bc2ee661cdf90dc147d0a6c4126ad7d71b5875",
+      "ids": [
+        "69e0b45709e5ca782c2a9f01118c8511ddcf93256dc15ca1ea09b92d17e8f0f7",
+        "d05da306987155fa0ea8b8ee939e05d54fd5be932150a02aa93908b7a0a0b78a",
+        "0da11318bcdb7888b534ef740127d82575bb4671c8978bcf1b0bd8c746dc8916"
+      ]
+    },
+    "company_knowledge/features/biomechanics.md": {
+      "sha256": "675190a5c8755f4a2888c5a8e85f9892a63824206f953fb2c60949370f2f53f0",
+      "ids": [
+        "74f2130776caae877ebb9dfa90762ef9301b93e25161859e02f5cc94c6a1e9bf",
+        "a7b17b8a4f1d14f7482def869b8b19d067291e414b802d5b467ac99bf9b669ef",
+        "c4acb4a8dd1d2b41b2ae8567f143aec8c6e2c588348a734521e6f8861b8b965d"
+      ]
+    },
+    "company_knowledge/features/bowling_analysis.md": {
+      "sha256": "7f092dc777dd6b0ac4877629c4fcc4d75a9fd391fcde2278d395e5d732a0aa04",
+      "ids": [
+        "1ed23a247cc08b4d0d5a3b110f4c72292d51be59d347a84aa10c0c95e55710fd",
+        "32b1ff817ffca2a7affb88dbba2663e5ae6b86d1080408babc0532da99262f99",
+        "66b98c10b16e0933d356274e513c13f9ca6460aa47df2f7cab30a1e2479fef61"
+      ]
+    },
+    "company_knowledge/features/subscriptions_and_referrals.md": {
+      "sha256": "c60a60d315e670ae059232d39b37e78da11cc409110876a1de2d5cc9a11534db",
+      "ids": [
+        "7ea9859795654b8f2eab799132b83e6ada25b20e4e6f50db1e684ef007a26cd1",
+        "0c7d46241865405eaa290f217c7a4166cfa42daecadab8b8f14a5f6b7de2a489",
+        "86fcd852580d6e5004d6031dc8d001746f58cc9dc4de1d00e3ba1106050a8fad"
+      ]
+    },
+    "company_knowledge/features/video_annotation.md": {
+      "sha256": "b1b4c244f767a7ffb3997446eb29343e0efbb07ab69ca272cd0d5b6224bf386c",
+      "ids": [
+        "0f414088ce7de57e3c45288d3a042bd1e906877fda7a6ab0dccf9e93b6af9d57",
+        "216d0b5146d6c51844083c5f34d406ca068e13369f185e9ec47c9fb6c18652fe",
+        "022003bff5f91b88b1cee3723f38c103584fb5a744f3c04aed7da5558a6dfbb3"
+      ]
+    },
+    "company_knowledge/features/video_comparison.md": {
+      "sha256": "f25fa47137f21d9b9a99cf0e04c2e2908769ec744fc5a44f247e63d9e9fdfb35",
+      "ids": [
+        "d6eb0d28e15c509410b26f6cf8fe1c3368fc717e8d412585deab61c4d409d1db",
+        "b7dc0e2f6112b657f8342d8cd0dc9e875d173c6747151913abfa701e350301a1"
+      ]
+    },
+    "company_knowledge/operations/annotation_operations.md": {
+      "sha256": "c6c314a1943e672f3bb122aecd2e1956e90061b34e0d5b78aa4e38f83371b5ff",
+      "ids": [
+        "e4bf4fdbd16d25ccdd3f741dace76b08c5f17c16d7c91161f13216a6c180fc4d",
+        "42048ab98c108b19cd76a8ea2bb671ffb059d3ad883d5d17717b70c2c5440e41",
+        "248ec5d73869578ac279696838404d5c90411c55ccd36b9fde1da6dae85cf054"
+      ]
+    },
+    "company_knowledge/operations/dataset_validation.md": {
+      "sha256": "b384494f90f7040156574a26e4f22be03ac3b3c9640f7cd79e97cc9b950424b4",
+      "ids": [
+        "0f669b0557a11656831dc7b25c7b463d97a7edddde0472ae2fcdca47e6ee51e9",
+        "3a4000bf23fb983bfdafddcfbf7411b83b01d4c6a72773d92150a15a5b14bfee",
+        "4d157d44b0ebcb1777cbf1651982c5717a7a81db12378cfbff8ec3fcaacf6377"
+      ]
+    },
+    "company_knowledge/operations/qa_testing.md": {
+      "sha256": "99c282aeb53121b48f4782ef1a03fe665f06efba1304d40b17d2b543fc9be85c",
+      "ids": [
+        "7d1b7c8121422cded6ad65dbaa6b09e6aa4b2c605ceae18977ff3b380ff7f651",
+        "34e5b32da6dc45b12dbb794133575810ffbabb1d75dd07b1293734adeb8614c5",
+        "e902e8d27668ff4bfadf5b7618183b04ba3153b2a863ce09d7303205bb5abc64",
+        "9be02c78bd5b04c7dd9c97e11ddb00a018942b8f33d6a5f09336ec6dde4be33c"
+      ]
+    },
+    "company_knowledge/operations/video_capture_guidelines.md": {
+      "sha256": "1099ad98798127bebb92b58b9da67364dc2da6185998a6cb4325b5cb998a0b9c",
+      "ids": [
+        "a7d3f7e1fda5692b44dee3c810bdc1b78aab9b27b40ecced3486399097d1746f",
+        "12a915bda00ef59d60e2bc9e30713eabbf812c58abcb7adb3fee2f4ba97c3cdb",
+        "ad290b8e2fbb0d629516fd6d68fe933a6947020bdcb2019618589809fb16236a"
+      ]
+    },
+    "company_knowledge/products/advanced_impactor.md": {
+      "sha256": "20566658acaf48524ea4d0bdf56c9e8ab11db7a61de2b1210ab2c95c0399d1a2",
+      "ids": [
+        "b719943dc974a969e12de5824d5dd2d83c0977ec69e44c8d557cdd2b7596089c",
+        "74c6c6e84365a420364db4f62377163b78c2677ed9551ca8c06f79a1b036c4d1",
+        "ff170462584a15af281891cd8c2109a0d2251dabaa535adce1b11c8e78eefc99",
+        "846825cf836b4128b32d3e7940d385d726760cbcc9955a6923764cf629b8a4dd"
+      ]
+    },
+    "company_knowledge/products/advanced_impactor_pro.md": {
+      "sha256": "5d9f5958cd6fe5a6e4b92239f9ec41f2f428aaa872c79100ef42a4c7501e76e5",
+      "ids": [
+        "554cf1a1671bebf7832d194ada582a4ca5d619ca2edce236efd027027547c9cf",
+        "aa735b18587f2a9f7cc520ba001abda72c9f0217bbc3243da525a9ffbdfda770",
+        "b6014fbe4dc2d4225000da2d1188fef05ab07c4a4f066be3752155605cc2431a"
+      ]
+    },
+    "company_knowledge/products/coach_plex.md": {
+      "sha256": "df6d618aa043e75b5781a4d40ea7424027662bcdbf3c914e5f0be5f0c9bd9217",
+      "ids": [
+        "cf4f0fee412326e95e3eb97c3bc71b3412a7c717ecaea2b61acb0125e4695546",
+        "8a23bc899ffbd00920d30df43b17dd756b7e4932aa2f4eeef1fa4a5f67a7cf21",
+        "132ee3df4871d1ad4b7fbc34f4302aa9241e7ff52683d06a171495e7f6dd1099",
+        "eb6a094b2fbc681f3ebfe0ba6508e771cd66d6d04b805f6456adb405729a9330"
+      ]
+    },
+    "company_knowledge/technology/ai_ml_pipeline.md": {
+      "sha256": "c9be581fb8cecdd678d1b435eef10b316afee3735854bdddb2f13e8e4e321404",
+      "ids": [
+        "80168119c2d77cdf37c19bdfa20c4495e6b22b638e78c7d160b95f701ecaa4f5",
+        "afb0167101317598d37cace8d85595a50548ba4092e2db46a92296f445849341",
+        "dcd5203a8d78db8b8b9e7675fcbb18bdf87ea8cabbdef029a0c4561866231226",
+        "69fb1baa5eec9d0e082a2877f739ec82a460c21b4b1dbeeff90b0e5b788e1484"
+      ]
+    },
+    "company_knowledge/technology/backend_architecture.md": {
+      "sha256": "ae7db19f6c3631e32dd5611181dba8a0294217575cf8d6ef250fe3905aea982f",
+      "ids": [
+        "6bce31f53c8bddf2566bfe47472226a30f3c788a32ad31eec96bef7b5c75c76e",
+        "56cb029df0be615ba65bc17ea058b11db4ee7bbd08b49d2a53f774021dec521d",
+        "471771a2ebbef3ef92a044852e1da007a149b0db05f60c5d1a36c118c0b87340",
+        "a67eb9ee92e8c4070589385b7f149238c7cd4be7c8bac1c4e3ffaddef3a48e19"
+      ]
+    },
+    "company_knowledge/technology/database_and_storage.md": {
+      "sha256": "894f2277cf8cc6579a5837adbebc51e2e6a99c7b4fd6c2f46d283e2e898a8a72",
+      "ids": [
+        "aba2432651125fa804ded72abff3fdff2e4c76ab8a852acdb591ea433006b715",
+        "bd4fbec8bc2e8000aa0a71243e97a773e3da254728e19dc477dc868a279a49a8",
+        "e9914cfe4947fb91f5ac72868efaec933947d3c5943d50d510fb18748f928346",
+        "74ea598e8646cd8ff7671476fa40c80d5e9a8f9c6d52c55b45c2182d55461da9"
+      ]
+    },
+    "company_knowledge/technology/internal_rag_system.md": {
+      "sha256": "ae31d1f5b8da5bb645d41d32061dafce4c99dde33a16d2db38b01a2e2c239408",
+      "ids": [
+        "656d9b191c94effcf7f53a7c576c8f3e006a89b75fd9f53308b278b65553fd8b",
+        "7a3fa2211dc5cf202a74e5ad19ea10dc33e44c360d86565d7737e743b0f4d3c4",
+        "14a2baed52ee3474e904ea97be2b33827447f6356d22196af90755dcd8e5d653",
+        "01511433b7bf76fc7fdc35c81cabbf6fe62d50f2f81dc32d1b9afde8f7044bc6"
+      ]
+    },
+    "company_knowledge/technology/system_architecture.md": {
+      "sha256": "bdc8017736d7ec97a6b74e7000de4799f5b018521f65141b7b3e0608176e8f1f",
+      "ids": [
+        "acfb4598c000285f4a7e7a273e26adf3fab68a31af92c69d17013e2e7f62857f",
+        "5940a0785b9c5a6a4a5b300022c46b06769dbc45a34d56e965a6acf750449262",
+        "3d6ed773c689da753dd8542e5408eeeb6fa2dbaf735493e36656bd96b0530ba8",
+        "6dd1954d3000e6dfaf0d9d96620fb7b0fb02e23a76fe91dade53386459ca7735",
+        "a187bf27687c9da504e17c08505e91aec92bbc7005eb5455ac9ca153f3a86977"
+      ]
+    },
+    "company_knowledge/technology/video_processing_pipeline.md": {
+      "sha256": "63850147173e9a31fd21cf371fe06444c1e930e76484c98c4b52d3d2eb460894",
+      "ids": [
+        "7e53026b6e62de6272e059691ba2d28b0fa2bdd062fe35ccb7c76cb4a1b01f01",
+        "b1070f21104a820066adc4a626c0f634cd0abe359ac69bec8e881e2f15defc14",
+        "1d035c207d4fa29dc63631e556821243e63f295c4525f1242637f92f40004b64",
+        "0b7a837da3dca6fd03fe3f46d07c0f04daded2b2c22bf703eea937bf67f0c673"
+      ]
+    },
+    "data/01_Privacy_Policy.docx": {
+      "sha256": "60296abd7b73377df32dadd355f06b34f4a2b7eb65d2a402ca9d3d85a796bbb4",
+      "ids": [
+        "43a3d9a7c789fbe8e6b04770b4c79ce596a75a24d359a9811609dbb62dfd4751",
+        "4fef1fb2e3f415ef617d6e8f9834bde80a2f64a1d2e9a4be8f84fd704c4ebbca",
+        "40780b57bd7594b18469e6e9ab7459373609bb458d46d5e538cf423342cf1014",
+        "bf7b54b505759f07317ef203d62f8c4137f45f8776ec59df63af259287cd8d94",
+        "ee60aa899b7569f70e1175b929eeeda64b31ff2f280a3565f2a2054aae20b90d",
+        "60fe809a269b041acb094968045585b2edb46b72d299389b513760a22e9ff0a6",
+        "56b7cdb160fddebf08cdb6864748dc9776e21c00012b0e120b198b937cb87c77",
+        "3a37bfe8b5fbe14c43f03096846484fe0cfa0bdc413794651b743a5c72935b35",
+        "89b68d41e72be5152bd706c080268b44ffc104bfc145eb77b698381b996d40c8",
+        "b0c6b8c2bb74f6e649c4af1e218dc1ecdb6db6e4bb88853e01814c5647dc68f1",
+        "19f19bb02d4aabce8f9587423472bc8697573e55278a802a9f4f5cb1fb567f6d",
+        "afd3d59839da5235c7ff1a13daaefee1af6850cd09909028d865263f7ad34006"
+      ]
+    },
+    "data/02_Terms_of_Use_EULA.docx": {
+      "sha256": "f20057251b83f47e9ca66a10e8682e70dd6f35bf3f09d32451283f506bf565f4",
+      "ids": [
+        "ec7a5a851f96280bd3f0c59c047274a51f32816102bc792209ea84d91843c344",
+        "98d5b8ff91be7653097f6cbe385a28089f652782b1a353b996dc3e4d79909212",
+        "87555930869e0878283016da5f1b40325a87dbeca77180f28d424c0d9ae0d776",
+        "bfc916bce51cc8a087e573e350031428f57b36c05c017d23ac670e3f3d327999",
+        "d49ba4f91d2604ddce82ee3b6d6f66c090096c4881d3eb4bced8fce2362a272f",
+        "ccff7271d04509aa4094b967f2f1f8c0225430d0e0d29f5f17ca64b27e2e81af",
+        "e0f259c6735939a174d0939c2706d740bf2b16ca56bed2693ed38804ee9e3c36",
+        "5dc85104bbcc90f149ffda0eaaef0e132d1d2fbf57bee233a7cd224903251b24",
+        "1ea16dec69c04c6005483c06e81db6401605729c82808854bd4d26de6e669e90",
+        "6d96e2d7cb8c90836fa93fd1335bd27254d704f952601833dc4915449aeae4eb",
+        "0a6389061ed8d303d883781b8d70567a82111f1f7b8af4f71078720239a18bb3",
+        "16606bc0e57307cfb69759256b220f8d0312ac14e3122fb44093140accaebd1d",
+        "8309abd65be2fdf7350fbe7ded00863132a2d2222caab5da2c2c982e6b437c3a",
+        "96bf4dd78fe3734a547433e095fd9edd14b4c4a65d7bb4ba020ed4d74b5d8922",
+        "808220bd5ea3bde32e7a4bd224b19225970ad0d2ff68268eb6f2c9e8b0e2f398"
+      ]
+    },
+    "data/03_Refund_Cancellation_Policy.docx": {
+      "sha256": "790ae59649b726d8457cfcafd5750ee27315ee77364f8495ca905e641aae3c8f",
+      "ids": [
+        "68af44e4f3acf2357bfb5f81145e49d73a3c085280c88fd0381f3727f8f0b810",
+        "feaee1b93bec9cf823d83fd29eacacbca5ff6474ea32d247ce2d97db212a23d9",
+        "bd20563b1edd435acacc09b344a0688d9f2c301213845ce03d61e5cbdc2f2a19",
+        "c45127238472cb77314b9ae01764a82970f76195d04d352dff40db3f30545dc2",
+        "b33df9f8a36cd085863168918d5f10cb471ead345deab0b524a4202c96ab4aa7",
+        "f7906317ef0209f19ecade6ffac953e558d2b70518841ff2f7fae327827512c0"
+      ]
+    },
+    "data/05_Coaches_Academy_Terms.docx": {
+      "sha256": "6c6219d72e79424a800afb30bc5b180281b22dd64a1fd8318e4b49aeff1060be",
+      "ids": [
+        "04ea17ca87aa23d313e7ec7cd864e7b1bcc17d861e408ff38fbf1757a5f78b8a",
+        "225a9df68e3f5db89837b126e80b94f2f41884b36806f82ab78e355b01bedab7",
+        "9a5603d13ea5cea270752efc4c63416b160436dec806c2f7a507e62c2781834f",
+        "bfe95064adcd2ead440c3fe2b476c8cfb4e4ff29671870513299c89b17d3109e",
+        "9b74a27f612564dbb020f70c37321887443d2f77c50fb544666868bfe4b40f98",
+        "9e47186dca218bc1b96bc6bded13cc389fe841cce9297a9a8c409e5a9bdcc301"
+      ]
+    },
+    "data/06_Enterprise_B2B_Terms.docx": {
+      "sha256": "d1e18acd6a29bb6afe0e236f50f726d3bf58d70284b21fa478807d87df2f2529",
+      "ids": [
+        "9030fd751c762293be85e7948151ac4bc6220f27d4b9b9a2e8ae625fe49eaa87",
+        "bff4b577eedaac06a705cc72be1a0919228da692b3dc580a6193a2e0d413e95e",
+        "0802d90cd5ff8f3cb957b09bd87babbcca78a1523cdb899247a75a34fa0df2d2",
+        "6e15bc23b77daf4f7ba58d80eaa8e5555ee282ec0bd51957396f92ae37420054",
+        "4b13638b4cb9758ebdbb45a600d3d57bff77310271975b240f8e24a87e96f8fe"
+      ]
+    },
+    "data/07_AI_Output_Disclaimer.docx": {
+      "sha256": "a42ed258053f67c34c193f2c0cf590510aff0dc21d9d4d0c5c29a4fef7d0510c",
+      "ids": [
+        "0a3bf54fac6fb98cab9912cc47c379a23a4b41792b44bc4ad0526b8e6f89eb1a",
+        "d0d6f35314613da0641100b1c42777b0a8081aaba9a9dae89edf586b6e4a9898",
+        "cf604871818be30240f5495dec71633178afef4c049d0623a2c933c9899614d6",
+        "a27e38948d421548f4681343663845aaee2ac6ba57cb81eb6ab3653e0111c89d",
+        "8578676024abd6569ab3bb76a596fa975a7ffb3815817cabf04459ce6d3712af",
+        "6fb895e8f21ac4a77b2491600ffb5d7a422bcb93a3c3d89414223b152f1385f2"
+      ]
+    },
+    "data/08_Minor_Parental_Consent.docx": {
+      "sha256": "9944409bef3249beb166c957a7b9f73dba97343886afa62820492576a2ccd2a9",
+      "ids": [
+        "f22175d56d6362315d75e1fca799db5dc14c4c4f8c0541bf593f072689f19801",
+        "422a9732106ceab9973ec064d165f3aa9075758ff70f88bc9601357a2f87e50e",
+        "248108e7538d92f9b168624a6737a1c834d7c6dc093f1db031a4d26dfc304af9",
+        "c1aba317c3ba70f72d8a1173693f69f53788e013901c0101c2001e8f2eb07ccd",
+        "5b45ea396d85056ce0107634e90b2fa19ff30ef250894f8674e40c4258e10adb",
+        "55eb8245b250772c9da8701bcd2bff07d8bce51ab5ee32c792ea1d0f92576d99"
+      ]
+    },
+    "data/Advanced Impactor MVP+Next Phase Proposal V1.0.docx": {
+      "sha256": "aab765a5d9fa155ec80fe2c77d464cf1a79dbea326ffd7b5b70b32bc6bad8d59",
+      "ids": [
+        "56c5af93ec4c5192be4958c40624a10d6289aa8d85ae51ccd0ec671eec063443",
+        "dc08793bdea5bfdb6e027be00e5f93fd58315a4a95521a53697ddd8bd5a24f4c",
+        "b6a01c8b24d4166e898cb03b78cffacb8fbc7baeb1a3fae40e9d7b3624f5d57f",
+        "ac30f19e3e088ffd8f781a4f401d2d89571f6bf5eed58c78be13e4d93933cd8e",
+        "15570c64dddb5606bb4e06f5e4a311d32fac492e9a1f4db59e260d318bbeeadd",
+        "fe6a57a53fb494fbd3c1796c22822c222d991089c4f1c551e6225c7338f7f255",
+        "aa8106f0adc43baa57c16d5d0b55c96ab8ba3bd45c3eee4784d1c2ce656350bd",
+        "985b9abf1478c32d7cfc007849e5b36a109aa8fa2f62c7aa48c1c30a8b4b4bac",
+        "571f34d37c3b5a8713429948f9404fb0e545bc4aae0a6dc47d5058438e96b499",
+        "501c62294d26a81b0ccaa7abe12f7ecb35bba9c20aa6d90eef6e1d93972a7b9b",
+        "b17f4264cd9daed897c955ba24b3b4ed4874fb4ff4e20be73057701d01eaebcb",
+        "4dde3af81c5e1714cc96ffeaec4b1cc50dde9ac1e9ce4faab8bf6268673dbd12",
+        "bf9deb40911d925d3e9c08bd483d94c10ce24b9c3b4a79970fba9efa8b740af2",
+        "5f8cf7d556d64375f6e9d58a021a608b53c956a0e6468761d0229fcd4d1fcdcb",
+        "81ccf3028e5fba5aabea5a0c287ed006bb2fdea4e83f4cef41bbbaafeb4a419a",
+        "598b5c82bb5dd36fb8c126b804bb5504e5d23034c05dcc0ec1a094943fd3cc68",
+        "47dd4d91ad0192af84846aae102cafb9a4d0905478306b92e1918446e9995e30",
+        "d394548969b4f0c477e97469eb8082329dc46cb44d74b6cf10d12f29487ed080",
+        "575d94e909f13263bd9e6d7d67499b6917844b0f028d1f0637df42a30e945e54",
+        "19d96505892bb731da82d6b4fe6e565ac8e0fa58e9b0dbac7a3e23d660fd5fd8",
+        "342e3ccbf791d7899b3cb3f5859c72ee964621930ed061898521100a45f9e75c",
+        "a6dc6981edad57471c2cf71b3b3805fcc8953ca1dc419c3e8ba5e2761e332ccc",
+        "97488e86d47f17bbc58cbe4a357f38c91ce336f7efb97033afd1c11d85a23175",
+        "fd35136f1a19eb1226e6a9b8c2057ff84397c45af4910609a896b46e61c821fd",
+        "1ed3b5e42e60885b6ef9e8bbe353372243b2afdf4af04dfdc35bf7ba8a36fb0e",
+        "f578ae543201adbe9996ff67dec2798a7df910e36eadef34bf480f5b4e941d98",
+        "5d3a91fbc1554e0b8afbeb1beb99674ed6a47acb0258b1ce52c5e80a43387fa2",
+        "0976cf1997d3710f22aced607278657c534ebf90af4ad35dd6e0fb8c52686564"
+      ]
+    },
+    "data/AdvancedImpactor_Deck_V7 (1).pptx": {
+      "sha256": "ab55c3494a1726032c8e0902d487fac0b627e75eddc5e236032b0f46bbf24af0",
+      "ids": [
+        "4d030d743c17722b22cbac7cc035c6274c457083c8f868836367ecce2343a495",
+        "9a243369600af9e8368d6b4582ec2af16352270d3ff78f082ad6a0e61eccac5b",
+        "cff2899e75290a87a4c066269438c7ea5f1a56dfd6d3d74237cd316534f65c38",
+        "306850d28ea8822fff9c1418f67f7a831c4a67ba3e27083557822945de82e979",
+        "75bae44066be14be1101cc7163d43570cda195bd1ef44f6ab22a6fe68db5012d",
+        "4a2e685835ca46cef6c497085d4f588d907d8355e04ac19ccf92e1617b695256",
+        "6ff6b6cda3f62edded2fe36b2ea58a0c68a3af560cd64416e8d291b6546bec94",
+        "6e2b24a4cda081f3d3f4c302005b0f1b253c27bc6180a06115d8a493e903eb98",
+        "a860c47f2d0ad83937a4531a3fa6ca452efcd54830a64c4edd4b22d1da34813d",
+        "7defbed0263e71898ca5751fe5441a5941c4a37e61d058928c9b113bc5193240",
+        "043bf2d28e68e6a2e5503cb0265ea486cc7b4c0bf7d1a585628518d2cd9b1d50",
+        "79256a23acda1cf5cbdc51b9a81900c330eedcd04b81dfee0b598360d89a88d8",
+        "79f14c5f2919bbb2b470b13b16b8c57f4d38d8eece5f0a46df3efd1ac00c3504",
+        "543c409f70d2b2f00ac9785b03a3e3031a48e970fc02dc32464e0504d4700df3",
+        "b543ac92865f68e66edac0d9d76c0a961438425727690d76247713a72a0f1c6b",
+        "b596c14e472f37bccd02832d807368d30aaa1a5b1161d18993ee52e265e5d9b9",
+        "95ffeb6e4bb6f9f0e672b58e9d9efd1d40a9d032be1b0ee6df2d80111bbf6b64",
+        "cb4d85df57bec8192cf30905751e961894e9b5678dbf0b866e33472e1a02f672",
+        "400c2dccfc02c5e88a41b4aef37d5a5814f391052ba5e51201cc7f175782ef34",
+        "3085fa26f13963bb8b54dac996c5fe59b81ab7751914ad4c7ec1a4691da4947e",
+        "b346e242d9476ec02b10e76f6075867878692d303211eedac9b1a0b0aa6121da",
+        "5890220dfe363415324b7dd0b36d8ee4017253b9fa9c3aef385526b5c0f5a17e",
+        "93ccb9cfa3dbc7fb624d96c0cf439294432cc516df2b2fcd673483707cebb5d9",
+        "884657727766981a902e7ee167b70beef68314e01d63b26bb2e746f84eb613ee",
+        "53fddf1635d47fe52c4d7ea860a18626c271fc68b6f8d1bbf2aaf4cc9ab025bc",
+        "43f493eb80af03a4a5efe7cb2dc035ca9a9e3423f9d7f79db575257a81ad11d4"
+      ]
+    },
+    "data/PLANS AND FEATURES PHASE 1_removed.pdf": {
+      "sha256": "4337b5924e4ee761560974607169fb83534b55296e1ddb46b3acf62390bf9fcd",
+      "ids": [
+        "8d7cdcbe0eb90a9d0c512def1c23761bf1c50a18bce0978b1a083a13e97a8036"
+      ]
+    },
+    "data/Price plan.pdf": {
+      "sha256": "32a4baa28cc4da15b1b12fe318f1f8c6c4a8d37050f167eaa00fbae570c356d2",
+      "ids": [
+        "6f22911753cf409628eb082e9b9c54a3dde6b29c1091dd1a9a9b4bef600acfed"
+      ]
+    },
+    "company_knowledge/business/company_history.md": {
+      "sha256": "f7e8c17a174a29059ef30484dd503748aefbb19f93dd7843dd6c06e437b653d8",
+      "ids": [
+        "222efbcafa50db7424d4a6306032649a6b0425b9df4e683bc3bdc209febdc60c",
+        "b9e69eff06010cc44efb45c455ecb348a900bd63404910eb3e062acbb0dde237",
+        "a766c1acf9392769f412afe1578a0837a6f4ecec62ccf65ebe7d5bf29671a0fc",
+        "e3718944b72727c4ae984a2752e3f098090d20eefe0833d6e01cea2b4f9cf1e5",
+        "ebecf8b57af23bb83b6f7620ec4a71424fae269228494c0395989ad3d9130181"
+      ]
+    },
+    "company_knowledge/documentation/source_register.md": {
+      "sha256": "266cb8f14495825e168c58ac790fb8661f0b73faba6965808a0e9501524010b3",
+      "ids": [
+        "00c3376f98cbc63e4996b90a59a2485b6ba0a84cc88d776d83fd7be6528d9dd4",
+        "2897be6a036c4df8e6387b08370d04ada7a1ef76a5863fecf3908972f8e3dfa5",
+        "57646499ed4035b7757f698201ee302b8b453e0c5eb72a01b0a63d5a73ce2b6d",
+        "aaf5026de453ab1a2535cffbc630bc8a9a0a25ae5d48ab585c3bc2960435af86",
+        "3662a1fb367de3e9112106a81ce99efb13bd4b1c85fc36648693df62f71255a3"
+      ]
+    },
+    "data/04_Cookie_Policy.docx": {
+      "sha256": "d76c7d91f230a16f7ba394f0e17ef0d75df2330971b24f1314ac6e75eb965197",
+      "ids": [
+        "191b3edacc7a1c44d2cc0bb11350dd2bf4f43d2f301f2e2e67d68413e65978d8",
+        "c0b58d9ee449e85ee86230213162f761e8225f4b47b10055e145e9385c29c3ba",
+        "aa51f781f3ed0bac5f0ebab9bba5f69a90eaec718aea76ba8a2945e55a026e4d",
+        "aa45d4ff46812abf8a32e394200afd05e833a34fa32e7ba8e97ce7ae20882267",
+        "2b5158311e72ffe30706da8cccf8b47db14cacf5d4f42a6b48110a6c22927900",
+        "83ed9d582a105f7d498e02cf541a0e6b23c476472274cd4e3438b6f4065c3524",
+        "cc9573e9e8c61cbaf6911d09d29327256840a0cd5e089404262ff879dea2f950",
+        "7962c07487d73d6f98eb1ab9bb1644002dfc04023be2fe4417836c0a09b51f44",
+        "b727afc8c18bf9be598c5ab423f6aa1efa33b3fe9b66998d69cd72091c6d3a09",
+        "ce69b69c5f381ac58340bf72dc7f34f087ca5a7a35d0e0a858b277183f5f7a5c",
+        "b60c2ab987bda07f2d90a892e5d9c3792dc03a51618e19fbaec26d5ddb4e350c"
+      ]
+    },
+    "company_knowledge/products/product_comparison.md": {
+      "sha256": "fafe60104f2a55b011be5d62165e9869c3ab47513cc5dd5842bb7fd9ea8e5f07",
+      "ids": [
+        "dee6f07c4ff580be03fa0f8eb18a5c07d674a0643790a6034730b73e8f54dd23",
+        "179e665997c30457e9fa3ff25102b496b4fe52cae8ff9c67ad8286f70ef935be",
+        "d54f235be050f3bad9fe05da9be387276cc00c592996cd5daf24ca7a739861b5",
+        "1175089ea191917f0c80fd5708757a2e6f62705c863e124edaa7784b446a1c66",
+        "b5689a6afe933e988d55d217ae197ddc38db83a4f50f1c41f15979477f4514ae"
+      ]
+    }
+  },
+  "source_errors": []
+}

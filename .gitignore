@@ -139,6 +139,7 @@ celerybeat.pid
 .envrc
 .venv
 .venv311/
+evaluation/.answer_eval_results.jsonl
 env/
 venv/
 ENV/

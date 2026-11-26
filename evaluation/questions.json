@@ -1,0 +1,205 @@
+{
+  "description": "32 question retrieval and evidence coverage set. Expected source paths are relevance labels, not answer scripts.",
+  "questions": [
+    {
+      "question": "What is Advanced Impactor and who is it for?",
+      "expected_sources": [
+        "company_knowledge/products/advanced_impactor.md"
+      ]
+    },
+    {
+      "question": "What are the company's stated objectives?",
+      "expected_sources": [
+        "company_knowledge/company_overview.md"
+      ]
+    },
+    {
+      "question": "What products are described in the knowledge base?",
+      "expected_sources": [
+        "company_knowledge/products/product_comparison.md",
+        "company_knowledge/documentation/faq.md"
+      ]
+    },
+    {
+      "question": "What video annotation tools are publicly listed?",
+      "expected_sources": [
+        "company_knowledge/features/video_annotation.md"
+      ]
+    },
+    {
+      "question": "Can users compare videos across training sessions?",
+      "expected_sources": [
+        "company_knowledge/features/video_comparison.md"
+      ]
+    },
+    {
+      "question": "What ball tracking metrics are listed for bowling?",
+      "expected_sources": [
+        "company_knowledge/features/ball_tracking.md"
+      ]
+    },
+    {
+      "question": "Which points appear in the 3D ball trajectory visualization?",
+      "expected_sources": [
+        "company_knowledge/features/3d_trajectory.md"
+      ]
+    },
+    {
+      "question": "What batting insights does the app list?",
+      "expected_sources": [
+        "company_knowledge/features/batting_analysis.md"
+      ]
+    },
+    {
+      "question": "What bowling insights does the app list?",
+      "expected_sources": [
+        "company_knowledge/features/bowling_analysis.md"
+      ]
+    },
+    {
+      "question": "Which movement elements are mentioned in biomechanics?",
+      "expected_sources": [
+        "company_knowledge/features/biomechanics.md"
+      ]
+    },
+    {
+      "question": "What does the AI report provide and what are its limits?",
+      "expected_sources": [
+        "company_knowledge/features/ai_reports.md"
+      ]
+    },
+    {
+      "question": "What is CoachPlex used for?",
+      "expected_sources": [
+        "company_knowledge/products/coach_plex.md"
+      ]
+    },
+    {
+      "question": "What is Advanced Impactor Pro positioned as?",
+      "expected_sources": [
+        "company_knowledge/products/advanced_impactor_pro.md"
+      ]
+    },
+    {
+      "question": "How do CoachPlex and Advanced Impactor Pro differ?",
+      "expected_sources": [
+        "company_knowledge/products/product_comparison.md"
+      ]
+    },
+    {
+      "question": "Explain the previously documented backend architecture.",
+      "expected_sources": [
+        "company_knowledge/technology/backend_architecture.md"
+      ]
+    },
+    {
+      "question": "Which databases and storage are identified in the internal architecture?",
+      "expected_sources": [
+        "company_knowledge/technology/database_and_storage.md"
+      ]
+    },
+    {
+      "question": "Explain the documented video processing pipeline.",
+      "expected_sources": [
+        "company_knowledge/technology/video_processing_pipeline.md"
+      ]
+    },
+    {
+      "question": "Which separate analysis workers were previously documented?",
+      "expected_sources": [
+        "company_knowledge/technology/ai_ml_pipeline.md"
+      ]
+    },
+    {
+      "question": "What are the four annotation event labels?",
+      "expected_sources": [
+        "company_knowledge/operations/annotation_operations.md"
+      ]
+    },
+    {
+      "question": "What camera setup was previously shared for video capture?",
+      "expected_sources": [
+        "company_knowledge/operations/video_capture_guidelines.md"
+      ]
+    },
+    {
+      "question": "What is the standard cricket pitch length?",
+      "expected_sources": [
+        "company_knowledge/operations/video_capture_guidelines.md"
+      ]
+    },
+    {
+      "question": "What quality assurance work is described?",
+      "expected_sources": [
+        "company_knowledge/operations/qa_testing.md"
+      ]
+    },
+    {
+      "question": "What historical dataset figures were shared for validation?",
+      "expected_sources": [
+        "company_knowledge/operations/dataset_validation.md"
+      ]
+    },
+    {
+      "question": "Can the historical 3D figures be described as model accuracy?",
+      "expected_sources": [
+        "company_knowledge/operations/dataset_validation.md"
+      ]
+    },
+    {
+      "question": "What stack does this repository use for its internal RAG system?",
+      "expected_sources": [
+        "company_knowledge/technology/internal_rag_system.md"
+      ]
+    },
+    {
+      "question": "Does the repository use ChromaDB or FAISS?",
+      "expected_sources": [
+        "company_knowledge/technology/internal_rag_system.md"
+      ]
+    },
+    {
+      "question": "How does the repository update its knowledge index?",
+      "expected_sources": [
+        "company_knowledge/technology/database_and_storage.md"
+      ]
+    },
+    {
+      "question": "What has Rediff reported about Oxfordshire Cricket?",
+      "expected_sources": [
+        "company_knowledge/business/partnerships.md"
+      ]
+    },
+    {
+      "question": "What role has Deep Dasgupta been reported to have?",
+      "expected_sources": [
+        "company_knowledge/business/partnerships.md"
+      ]
+    },
+    {
+      "question": "What is publicly documented about the product launch timing?",
+      "expected_sources": [
+        "company_knowledge/business/product_launches.md"
+      ]
+    },
+    {
+      "question": "Did the Lord's showcase actually take place?",
+      "expected_sources": [
+        "company_knowledge/business/product_launches.md"
+      ]
+    },
+    {
+      "question": "What sources and citations are listed in the source register?",
+      "expected_sources": [
+        "company_knowledge/documentation/source_register.md"
+      ]
+    },
+    {
+      "question": "How many customers does Advanced Impactor have and what is its revenue?",
+      "expected_sources": [
+        "company_knowledge/business/business_analysis.md"
+      ],
+      "expect_abstention": true
+    }
+  ]
+}

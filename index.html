@@ -526,6 +526,23 @@
       border-bottom-left-radius: 4px;
     }
 
+    .msg.bot .answer-content { white-space: normal; }
+    .msg.bot .answer-content p { margin: 0 0 8px; }
+    .msg.bot .answer-content p:last-child { margin-bottom: 0; }
+    .msg.bot .answer-content h1, .msg.bot .answer-content h2, .msg.bot .answer-content h3 { margin: 8px 0 5px; font-size: 13px; color: var(--text-1); }
+    .msg.bot .answer-content ul, .msg.bot .answer-content ol { margin: 4px 0 8px 18px; }
+    .msg.bot .answer-content li { margin: 2px 0; }
+    .msg.bot .answer-content pre { overflow-x: auto; padding: 9px; margin: 7px 0; background: rgba(0,0,0,.3); border-radius: 7px; }
+    .msg.bot .answer-content code { font-family: Consolas, monospace; font-size: 12px; }
+    .msg.bot .answer-content table { border-collapse: collapse; margin: 8px 0; width: 100%; font-size: 11px; }
+    .msg.bot .answer-content th, .msg.bot .answer-content td { border: 1px solid var(--blue-border); padding: 5px; text-align: left; }
+    .answer-sources { border-top: 1px solid rgba(255,255,255,.12); margin-top: 10px; padding-top: 7px; font-size: 10px; }
+    .answer-sources-title { color: var(--text-3); margin-bottom: 4px; text-transform: uppercase; letter-spacing: .5px; }
+    .answer-source { display: block; color: var(--text-2); margin: 4px 0; text-decoration: none; }
+    .answer-source:hover { color: white; text-decoration: underline; }
+    .source-status { color: var(--text-3); font-size: 9px; margin-left: 4px; }
+    .chat-input-row button:disabled { opacity: .55; cursor: wait; }
+
     .msg.user {
       background: var(--blue);
       color: #fff;
@@ -797,20 +814,20 @@
         </svg>
       </div>
       <div>
-        <div class="chat-header-name">AI Chatbot</div>
-        <div class="chat-header-status"><span class="status-dot"></span> Online</div>
+        <div class="chat-header-name">Company Knowledge Assistant</div>
+        <div class="chat-header-status"><span class="status-dot"></span> Advanced Impactor</div>
       </div>
     </div>
 
     <div class="chat-messages" id="chatMessages">
       <div class="msg bot">
-        Hi! I'm your Advanced Impactor assistant. Ask me anything about the platform — features, coaching, AI analysis, and more! 🏏
+        Hi! I’m the Advanced Impactor company knowledge assistant. Ask about products, cricket analytics, operations, or technical architecture. I’ll show the source documents with my answers.
       </div>
       <div class="quick-chips">
-        <span class="chip" onclick="sendChip('What AI features does the player dashboard have?')">Player dashboard</span>
-        <span class="chip" onclick="sendChip('How does AI video analysis work?')">AI analysis</span>
-        <span class="chip" onclick="sendChip('What roles and permissions does the admin have?')">Admin roles</span>
-        <span class="chip" onclick="sendChip('What can coaches do on the platform?')">For coaches</span>
+        <span class="chip" onclick="sendChip('What products are part of the company ecosystem?')">Products</span>
+        <span class="chip" onclick="sendChip('What does the ball tracking feature show?')">Ball tracking</span>
+        <span class="chip" onclick="sendChip('Explain the previously documented video processing pipeline.')">Technology</span>
+        <span class="chip" onclick="sendChip('What are the four annotation event labels?')">Annotation labels</span>
       </div>
     </div>
 
@@ -830,9 +847,13 @@
     </div>
   </div>
 
+  <script src="api-config.js"></script>
   <script>
-    const API_BASE_URL = window.location.origin;
+    const API_BASE_URL = String(window.CHATBOT_API_BASE_URL || '').trim().replace(/\/+$/, '') || window.location.origin;
+    const HISTORY_KEY = 'advancedImpactorKnowledgeChat';
     var isOpen = false;
+    var conversation = [];
+    try { conversation = JSON.parse(localStorage.getItem(HISTORY_KEY) || '[]'); } catch (_) { conversation = []; }
 
     function toggleChat() {
       isOpen = !isOpen;
@@ -842,11 +863,94 @@
       if (isOpen) setTimeout(() => document.getElementById('chatInput').focus(), 300);
     }
 
-    function addMsg(text, role) {
+    function escapeHtml(value) {
+      return String(value).replace(/[&<>"']/g, function(char) {
+        return { '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[char];
+      });
+    }
+
+    function inlineMarkdown(value) {
+      var html = escapeHtml(value);
+      html = html.replace(/`([^`]+)`/g, '<code>$1</code>');
+      html = html.replace(/\*\*(.+?)\*\*/g, '<strong>$1</strong>');
+      html = html.replace(/\*(.+?)\*/g, '<em>$1</em>');
+      html = html.replace(/\[(.+?)\]\((https?:\/\/[^\s)]+)\)/g, function(_, label, href) {
+        return '<a href="' + href + '" target="_blank" rel="noopener noreferrer">' + label + '</a>';
+      });
+      return html;
+    }
+
+    function renderMarkdown(markdown) {
+      var blocks = [];
+      var text = String(markdown || '').replace(/```([^\n]*)\n([\s\S]*?)```/g, function(_, lang, code) {
+        blocks.push('<pre><code>' + escapeHtml(code.replace(/\n$/, '')) + '</code></pre>');
+        return '%%CODE' + (blocks.length - 1) + '%%';
+      });
+      var lines = text.split(/\r?\n/), output = [], listType = null, inTable = false;
+      function closeList() { if (listType) { output.push('</' + listType + '>'); listType = null; } }
+      function closeTable() { if (inTable) { output.push('</tbody></table>'); inTable = false; } }
+      lines.forEach(function(line) {
+        var trimmed = line.trim();
+        if (!trimmed) { closeList(); closeTable(); return; }
+        if (/^%%CODE\d+%%$/.test(trimmed)) { closeList(); closeTable(); output.push(blocks[Number(trimmed.match(/\d+/)[0])]); return; }
+        if (/^\|.*\|$/.test(trimmed)) {
+          closeList();
+          if (/^\|?\s*:?-{3,}/.test(trimmed.replace(/\|/g, ''))) return;
+          var cells = trimmed.replace(/^\||\|$/g, '').split('|').map(function(cell) { return cell.trim(); });
+          if (!inTable) { output.push('<table><tbody>'); inTable = true; }
+          output.push('<tr>' + cells.map(function(cell) { return '<td>' + inlineMarkdown(cell) + '</td>'; }).join('') + '</tr>');
+          return;
+        }
+        closeTable();
+        var heading = trimmed.match(/^(#{1,3})\s+(.+)$/);
+        if (heading) { closeList(); var level = heading[1].length; output.push('<h' + level + '>' + inlineMarkdown(heading[2]) + '</h' + level + '>'); return; }
+        var bullet = trimmed.match(/^[-*]\s+(.+)$/), numbered = trimmed.match(/^\d+[.)]\s+(.+)$/);
+        if (bullet || numbered) {
+          var wanted = bullet ? 'ul' : 'ol';
+          if (listType !== wanted) { closeList(); output.push('<' + wanted + '>'); listType = wanted; }
+          output.push('<li>' + inlineMarkdown((bullet || numbered)[1]) + '</li>'); return;
+        }
+        closeList();
+        output.push('<p>' + inlineMarkdown(trimmed) + '</p>');
+      });
+      closeList(); closeTable();
+      return output.join('');
+    }
+
+    function addMsg(text, role, sources) {
       var msgs = document.getElementById('chatMessages');
       var div = document.createElement('div');
       div.className = 'msg ' + role;
-      div.textContent = text;
+      if (role === 'bot') {
+        var body = document.createElement('div');
+        body.className = 'answer-content';
+        body.innerHTML = renderMarkdown(text);
+        div.appendChild(body);
+        if (sources && sources.length) {
+          var sourceList = document.createElement('div');
+          sourceList.className = 'answer-sources';
+          var title = document.createElement('div');
+          title.className = 'answer-sources-title';
+          title.textContent = 'Sources';
+          sourceList.appendChild(title);
+          sources.forEach(function(source) {
+            var label = (source.title || source.source || 'Document') + ' · ' + (source.section || 'Document');
+            var url = Array.isArray(source.urls) ? source.urls.find(function(candidate) { return /^https?:\/\//i.test(candidate); }) : null;
+            var item = document.createElement(url ? 'a' : 'div');
+            item.className = 'answer-source';
+            item.textContent = label;
+            if (url) { item.href = url; item.target = '_blank'; item.rel = 'noopener noreferrer'; }
+            var status = document.createElement('span');
+            status.className = 'source-status';
+            status.textContent = '[' + (source.verification_status || 'INTERNAL_CONTEXT') + ']';
+            item.appendChild(status);
+            sourceList.appendChild(item);
+          });
+          div.appendChild(sourceList);
+        }
+      } else {
+        div.textContent = text;
+      }
       msgs.appendChild(div);
       msgs.scrollTop = msgs.scrollHeight;
     }
@@ -871,17 +975,55 @@
       document.getElementById('chatInput').disabled = on;
     }
 
-    async function askRAG(question) {
-      const res = await fetch(API_BASE_URL + '/ask', {
+    async function askRAG(question, history) {
+      if (!window.CHATBOT_API_BASE_URL && window.location.hostname.endsWith('github.io')) {
+        throw new Error('The GitHub Pages site only hosts the chat page. Its FastAPI backend has not been configured. Set CHATBOT_API_BASE_URL in api-config.js to the deployed API URL.');
+      }
+      let res;
+      try {
+        res = await fetch(API_BASE_URL + '/ask', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ question: question })
-      });
-      if (!res.ok) throw new Error('Server error: ' + res.status);
+        body: JSON.stringify({ question: question, history: history })
+        });
+      } catch (err) {
+        throw new Error('Could not reach the chatbot API. Check that the backend is deployed and CHATBOT_API_BASE_URL in api-config.js is correct.');
+      }
+      if (!res.ok) {
+        var problem = await res.json().catch(function() { return {}; });
+        throw new Error(problem.detail || ('Server error: ' + res.status));
+      }
       const data = await res.json();
-      return data.answer;
+      return data;
+    }
+
+    function saveConversation() {
+      conversation = conversation.slice(-40);
+      try { localStorage.setItem(HISTORY_KEY, JSON.stringify(conversation)); } catch (_) {}
+    }
+
+    async function submitQuestion(text) {
+      var priorHistory = conversation.slice(-12);
+      conversation.push({ role: 'user', content: text });
+      saveConversation();
+      addMsg(text, 'user');
+      showTyping();
+      setLoading(true);
+      try {
+        var result = await askRAG(text, priorHistory);
+        removeTyping();
+        addMsg(result.answer, 'bot', result.sources);
+        conversation.push({ role: 'assistant', content: result.answer, sources: result.sources || [] });
+        saveConversation();
+      } catch (err) {
+        removeTyping();
+        addMsg('I could not complete that request. ' + err.message, 'error');
+      } finally {
+        setLoading(false);
+        document.getElementById('chatInput').focus();
+      }
     }
 
     async function sendMessage() {
@@ -889,40 +1031,15 @@
       var text = input.value.trim();
       if (!text) return;
       input.value = '';
-      addMsg(text, 'user');
-      showTyping();
-      setLoading(true);
-      try {
-        var answer = await askRAG(text);
-        removeTyping();
-        addMsg(answer, 'bot');
-      } catch (err) {
-        removeTyping();
-        addMsg('Sorry, I could not reach the server. Make sure the FastAPI app and ngrok tunnel are both running.', 'error');
-      } finally {
-        setLoading(false);
-        document.getElementById('chatInput').focus();
-      }
+      await submitQuestion(text);
     }
 
     async function sendChip(text) {
       if (!isOpen) toggleChat();
-      setTimeout(async function() {
-        addMsg(text, 'user');
-        showTyping();
-        setLoading(true);
-        try {
-          var answer = await askRAG(text);
-          removeTyping();
-          addMsg(answer, 'bot');
-        } catch (err) {
-          removeTyping();
-          addMsg('Sorry, I could not reach the server. Make sure the FastAPI app and ngrok tunnel are both running.', 'error');
-        } finally {
-          setLoading(false);
-        }
-      }, 200);
+      setTimeout(function() { submitQuestion(text); }, 200);
     }
+
+    conversation.forEach(function(message) { addMsg(message.content, message.role === 'user' ? 'user' : 'bot', message.sources || []); });
 
     // Hide ping bubble after 4 seconds
     setTimeout(function() {

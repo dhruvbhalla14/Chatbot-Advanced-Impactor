@@ -1,0 +1,502 @@
+{
+  "description": "Lightweight answer-quality checks for generated output; findings are heuristics and need human review.",
+  "expectations": [
+    {
+      "question": "What is Advanced Impactor and who is it for?",
+      "must_include_any": [
+        [
+          "cricket analysis",
+          "cricket performance"
+        ],
+        [
+          "players",
+          "parents",
+          "coaches"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "What are the company's stated objectives?",
+      "must_include_any": [
+        [
+          "measurable",
+          "measure"
+        ],
+        [
+          "video",
+          "performance"
+        ],
+        [
+          "coaches",
+          "player development"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "What products are described in the knowledge base?",
+      "must_include_any": [
+        [
+          "advanced impactor",
+          "coachplex"
+        ],
+        [
+          "pro",
+          "academy"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "What video annotation tools are publicly listed?",
+      "must_include_any": [
+        [
+          "offline",
+          "frame-by-frame",
+          "annotation"
+        ],
+        [
+          "standalone",
+          "annotation",
+          "pitch zones"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "Can users compare videos across training sessions?",
+      "must_include_any": [
+        [
+          "compare",
+          "comparison"
+        ],
+        [
+          "training sessions",
+          "player development"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "What ball tracking metrics are listed for bowling?",
+      "must_include_any": [
+        [
+          "line",
+          "length"
+        ],
+        [
+          "speed",
+          "deviation",
+          "release"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "Which points appear in the 3D ball trajectory visualization?",
+      "must_include_any": [
+        [
+          "release",
+          "pitch",
+          "impact"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "What batting insights does the app list?",
+      "must_include_any": [
+        [
+          "bat angles",
+          "foot positioning"
+        ],
+        [
+          "shot selection",
+          "shot control"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "What bowling insights does the app list?",
+      "must_include_any": [
+        [
+          "line",
+          "length"
+        ],
+        [
+          "speed",
+          "deviation",
+          "release"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "Which movement elements are mentioned in biomechanics?",
+      "must_include_any": [
+        [
+          "torso rotation",
+          "swing path"
+        ],
+        [
+          "stride flow",
+          "shoulder alignment"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "What does the AI report provide and what are its limits?",
+      "must_include_any": [
+        [
+          "performance insights",
+          "report"
+        ],
+        [
+          "accuracy",
+          "guarantee",
+          "coach"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "What is CoachPlex used for?",
+      "must_include_any": [
+        [
+          "coach",
+          "athlete"
+        ],
+        [
+          "sessions",
+          "schedules",
+          "feedback"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "What is Advanced Impactor Pro positioned as?",
+      "must_include_any": [
+        [
+          "multi-sport",
+          "academy management"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "How do CoachPlex and Advanced Impactor Pro differ?",
+      "must_include_any": [
+        [
+          "cricket",
+          "analysis"
+        ],
+        [
+          "management",
+          "academy"
+        ],
+        [
+          "unverified",
+          "not establish",
+          "unknown"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "Explain the previously documented backend architecture.",
+      "must_include_any": [
+        [
+          "node.js",
+          "lambda"
+        ],
+        [
+          "mongodb",
+          "crud"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "Which databases and storage are identified in the internal architecture?",
+      "must_include_any": [
+        [
+          "mongodb"
+        ],
+        [
+          "s3",
+          "amazon"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "Explain the documented video processing pipeline.",
+      "must_include_any": [
+        [
+          "rotation",
+          "correction"
+        ],
+        [
+          "segmentation",
+          "ball-by-ball"
+        ],
+        [
+          "s3",
+          "mongo"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "Which separate analysis workers were previously documented?",
+      "must_include_any": [
+        [
+          "biomechanics"
+        ],
+        [
+          "shot classification"
+        ],
+        [
+          "gemini"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "What are the four annotation event labels?",
+      "must_include_any": [
+        [
+          "0",
+          "random"
+        ],
+        [
+          "1",
+          "release"
+        ],
+        [
+          "2",
+          "pitch"
+        ],
+        [
+          "3",
+          "impact"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "What camera setup was previously shared for video capture?",
+      "must_include_any": [
+        [
+          "1.5",
+          "1.75"
+        ],
+        [
+          "1.5",
+          "1.6"
+        ],
+        [
+          "historical",
+          "previously"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "What is the standard cricket pitch length?",
+      "must_include_any": [
+        [
+          "22 yards"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "What quality assurance work is described?",
+      "must_include_any": [
+        [
+          "regression"
+        ],
+        [
+          "mobile",
+          "browser"
+        ],
+        [
+          "bug",
+          "validation"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "What historical dataset figures were shared for validation?",
+      "must_include_any": [
+        [
+          "61.2"
+        ],
+        [
+          "51",
+          "100"
+        ],
+        [
+          "historical",
+          "not accuracy"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "Can the historical 3D figures be described as model accuracy?",
+      "must_include_any": [
+        [
+          "not accuracy",
+          "not model accuracy"
+        ],
+        [
+          "no",
+          "not"
+        ],
+        [
+          "historical",
+          "rubric"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "What stack does this repository use for its internal RAG system?",
+      "must_include_any": [
+        [
+          "fastapi"
+        ],
+        [
+          "langchain"
+        ],
+        [
+          "faiss"
+        ],
+        [
+          "gemini"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "Does the repository use ChromaDB or FAISS?",
+      "must_include_any": [
+        [
+          "faiss"
+        ],
+        [
+          "not chroma",
+          "does not use chroma",
+          "no chroma"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "How does the repository update its knowledge index?",
+      "must_include_any": [
+        [
+          "manifest"
+        ],
+        [
+          "hash"
+        ],
+        [
+          "incremental",
+          "changed"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "What has Rediff reported about Oxfordshire Cricket?",
+      "must_include_any": [
+        [
+          "rediff reported",
+          "rediff"
+        ],
+        [
+          "partner",
+          "partnership"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "What role has Deep Dasgupta been reported to have?",
+      "must_include_any": [
+        [
+          "mentor"
+        ],
+        [
+          "technical input",
+          "development"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "What is publicly documented about the product launch timing?",
+      "must_include_any": [
+        [
+          "august",
+          "last month"
+        ],
+        [
+          "exact launch date",
+          "not establish",
+          "not confirmed"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "Did the Lord's showcase actually take place?",
+      "must_include_any": [
+        [
+          "does not confirm",
+          "not confirmed",
+          "unverified",
+          "cannot confirm"
+        ]
+      ],
+      "requires_citation": true,
+      "expect_abstention": true
+    },
+    {
+      "question": "What sources and citations are listed in the source register?",
+      "must_include_any": [
+        [
+          "google play",
+          "app store"
+        ],
+        [
+          "rediff",
+          "cricket innovation forum"
+        ]
+      ],
+      "requires_citation": true
+    },
+    {
+      "question": "How many customers does Advanced Impactor have and what is its revenue?",
+      "must_include_any": [
+        [
+          "not enough documented",
+          "not provided",
+          "not available",
+          "no revenue",
+          "not established"
+        ]
+      ],
+      "requires_citation": true,
+      "expect_abstention": true
+    }
+  ]
+}
