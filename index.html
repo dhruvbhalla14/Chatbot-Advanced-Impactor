@@ -779,7 +779,10 @@
 
     /* Advanced Impactor logo blue */
     .nav-logo { gap: 0; }
-    .nav-wordmark { display: block; width: 154px; height: auto; }
+    .nav-wordmark { display: block; flex: 0 0 160px; width: 160px; min-width: 160px; height: 64px; object-fit: contain; }
+    @media (max-width: 760px) {
+      .nav-wordmark { flex-basis: 142px; width: 142px; min-width: 142px; height: 57px; }
+    }
     .nav-links a:hover, .nav-brand, .hero h1, .hero h1 .accent, .section-label, .section-title, .feature-title, .visual-copy h2 { color: #078cff; }
     .hero-tag { color: #078cff; }
     .hero-tag-dot { background: #078cff; }
@@ -830,7 +833,7 @@
 
   <nav>
     <a href="#top" class="nav-logo" aria-label="Advanced Impactor home">
-      <img class="nav-wordmark" src="assets/advanced-impactor-logo.svg" alt="Advanced Impactor" />
+      <img class="nav-wordmark" src="assets/advanced-impactor-logo.svg?v=2" width="160" height="64" alt="Advanced Impactor" />
     </a>
     <ul class="nav-links">
       <li><a href="#features">Capabilities</a></li>

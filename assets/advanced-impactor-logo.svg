@@ -1,4 +1,4 @@
-<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 160 64" role="img" aria-labelledby="title">
+<svg xmlns="http://www.w3.org/2000/svg" width="160" height="64" viewBox="0 0 160 64" role="img" aria-labelledby="title">
   <title id="title">Advanced Impactor</title>
   <g fill="#078cff">
     <rect x="6" y="19" width="6" height="39" rx="3"/>
