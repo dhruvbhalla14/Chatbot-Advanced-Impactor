@@ -3,7 +3,8 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
-  <title>Advanced Impactor — AI Cricket Coaching</title>
+  <meta name="description" content="Explore cricket video review, ball tracking and performance insights from Advanced Impactor." />
+  <title>Advanced Impactor — Cricket Performance Intelligence</title>
   <link href="https://fonts.googleapis.com/css2?family=Sora:wght@300;400;500;600;700&display=swap" rel="stylesheet"/>
   <style>
     *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
@@ -643,6 +644,138 @@
     .send-btn svg { width: 15px; height: 15px; }
 
     .send-btn:disabled { background: rgba(26,111,255,0.3); cursor: not-allowed; }
+
+    /* Premium cricket editorial refresh */
+    :root {
+      --navy: #f4f4ed;
+      --navy-2: #f4f4ed;
+      --navy-3: #ffffff;
+      --navy-4: #e8e9df;
+      --blue: #244b38;
+      --blue-light: #617c47;
+      --blue-dim: rgba(97,124,71,.1);
+      --blue-border: rgba(36,75,56,.17);
+      --text-1: #16231b;
+      --text-2: #435348;
+      --text-3: #778177;
+      --border: rgba(25,48,35,.12);
+    }
+    body { background: #f4f4ed; color: #16231b; font-family: 'Sora', 'Segoe UI', sans-serif; }
+    body::before { display: none; }
+    .blob { display: none; }
+    nav { height: 78px; padding: 0 clamp(22px, 6vw, 92px); background: rgba(244,244,237,.92); border-color: #dedfd5; backdrop-filter: blur(18px); }
+    .logo-mark { background: #244b38; border-radius: 50%; }
+    .nav-brand { color: #16231b; letter-spacing: -.5px; }
+    .nav-links { gap: clamp(18px, 3vw, 38px); }
+    .nav-links a { color: #687369; font-size: 12px; }
+    .nav-links a:hover { color: #244b38; }
+    .nav-cta, .btn-primary { background: #244b38; border-radius: 999px; color: #f6f7ed; }
+    .nav-cta { padding: 11px 21px; }
+    .nav-cta:hover, .btn-primary:hover { background: #183725; }
+    .hero { display: grid; grid-template-columns: minmax(0,1.05fr) minmax(340px,.95fr); align-items: center; gap: clamp(34px,7vw,100px); max-width: 1360px; min-height: 620px; padding: 74px clamp(24px,7vw,104px) 82px; text-align: left; }
+    .hero-tag { border: 0; background: transparent; color: #63764a; padding: 0; margin-bottom: 24px; letter-spacing: 1.8px; font-size: 10px; }
+    .hero-tag-dot { width: 7px; height: 7px; background: #a5b65d; }
+    .hero h1 { max-width: 670px; color: #17291e; font-family: Georgia, 'Times New Roman', serif; font-size: clamp(54px,7.6vw,98px); font-weight: 400; letter-spacing: -4.5px; line-height: .99; margin-bottom: 24px; }
+    .hero h1 .accent { color: #72884e; background: none; -webkit-text-fill-color: currentColor; }
+    .hero-sub { max-width: 530px; color: #687369; font-size: 15px; font-weight: 300; line-height: 1.9; margin-bottom: 30px; }
+    .hero-btns { justify-content: flex-start; gap: 11px; }
+    .btn-primary, .btn-ghost { padding: 13px 22px; font-size: 12px; font-weight: 500; }
+    a.btn-primary { display: inline-flex; align-items: center; gap: 8px; text-decoration: none; }
+    .btn-ghost { border-color: #d8dbd0; border-radius: 999px; color: #3d5143; }
+    .btn-ghost:hover { border-color: #244b38; color: #244b38; }
+    .hero-note { margin-top: 22px; color: #899087; font-size: 10px; letter-spacing: .15px; }
+    .hero-note span { color: #536949; }
+    .hero-visual { min-height: 424px; position: relative; overflow: hidden; padding: 25px; border-radius: 8px; background: #1d3729; color: #f5f4e9; box-shadow: 0 24px 55px rgba(28,48,34,.15); }
+    .hero-visual::before { content: ''; position: absolute; width: 310px; height: 310px; border: 1px solid rgba(205,218,158,.13); border-radius: 50%; right: -95px; top: -115px; box-shadow: 0 0 0 34px rgba(205,218,158,.035),0 0 0 72px rgba(205,218,158,.025); }
+    .visual-topbar { display: flex; position: relative; justify-content: space-between; align-items: center; padding-bottom: 20px; border-bottom: 1px solid rgba(241,241,220,.14); color: #c9d0b9; font-size: 9px; letter-spacing: 1.6px; }
+    .visual-tag { border: 1px solid rgba(217,226,177,.25); border-radius: 999px; padding: 6px 9px; color: #d8e0b2; font-size: 8px; }
+    .visual-content { position: relative; display: grid; grid-template-columns: .75fr 1fr; gap: 18px; align-items: center; min-height: 290px; }
+    .visual-copy small { color: #b7c38a; font-size: 9px; letter-spacing: 1.4px; }
+    .visual-copy h2 { margin: 12px 0; font-family: Georgia, serif; font-size: 30px; font-weight: 400; line-height: 1.06; }
+    .visual-copy p { max-width: 160px; color: #b7c2b5; font-size: 10px; line-height: 1.7; }
+    .event-list { margin-top: 20px; display: grid; gap: 8px; }
+    .event-row { display: flex; align-items: center; gap: 8px; color: #d9dfd0; font-size: 9px; }
+    .event-index { display: grid; place-items: center; width: 19px; height: 19px; border: 1px solid rgba(216,225,175,.35); border-radius: 50%; color: #d8e0b2; font-size: 8px; }
+    .pitch-graphic { width: 100%; max-width: 220px; justify-self: center; filter: drop-shadow(0 10px 18px rgba(0,0,0,.2)); }
+    .visual-caption { position: absolute; right: 0; bottom: 0; color: #99aa8f; font-size: 8px; letter-spacing: .8px; text-transform: uppercase; }
+    .stats { max-width: none; margin: 0; padding: 0 clamp(24px,7vw,104px); border: 0; border-top: 1px solid #dedfd5; border-bottom: 1px solid #dedfd5; border-radius: 0; background: #eceee4; backdrop-filter: none; }
+    .stat-item { display: flex; align-items: baseline; gap: 15px; padding: 22px 20px; text-align: left; border-color: #d9dbd0; }
+    .stat-value { color: #244b38; font-family: Georgia,serif; font-size: 23px; font-weight: 400; letter-spacing: -.3px; white-space: nowrap; }
+    .stat-value span { color: #71864c; }
+    .stat-label { margin: 0; color: #71796e; font-size: 9px; letter-spacing: .8px; text-transform: uppercase; }
+    .section { max-width: 1360px; margin: 0 auto; padding: 100px clamp(24px,7vw,104px) 108px; }
+    .section-label { color: #75854f; font-size: 10px; letter-spacing: 1.8px; }
+    .section-title { max-width: 560px; margin: 14px 0 42px; color: #17291e; font-family: Georgia,serif; font-size: clamp(36px,5vw,60px); font-weight: 400; letter-spacing: -1.5px; line-height: 1.05; }
+    .features-grid { grid-template-columns: repeat(2,minmax(0,1fr)); gap: 14px; }
+    .feature-card { min-height: 220px; padding: 28px; border-color: #e0e2d8; border-radius: 5px; background: #fbfbf7; backdrop-filter: none; }
+    .feature-card:hover { border-color: #9cab7c; transform: translateY(-3px); box-shadow: 0 14px 32px rgba(31,53,37,.06); }
+    .feature-icon { border-radius: 50%; background: #edf0e5; border-color: #dce2cf; }
+    .feature-icon svg * { stroke: #526a3d; }
+    .feature-title { color: #203729; font-family: Georgia,serif; font-size: 21px; font-weight: 400; }
+    .feature-desc { max-width: 540px; color: #747c72; font-size: 12px; line-height: 1.85; }
+    .section-approach { padding-top: 0; }
+    .assistant-callout { min-height: 0; display: flex; align-items: center; justify-content: space-between; gap: 28px; background: #1d3729; border-color: #1d3729; color: #f5f4e9; }
+    .assistant-callout .feature-title { color: #f5f4e9; }
+    .assistant-callout .feature-desc { max-width: 650px; color: #c2cdbd; }
+    .assistant-callout .btn-primary { flex-shrink: 0; background: #a5b65d; color: #193424; white-space: nowrap; }
+    footer { padding: 25px; border-color: #dedfd5; color: #7c8478; font-size: 10px; }
+    .bot-ping { border-color: rgba(204,219,163,.3); border-radius: 4px; background: #1d3729; color: #e3ead3; }
+    .bot-ping::after { background: #1d3729; border-color: rgba(204,219,163,.3); }
+    .bot-trigger { width: 60px; height: 60px; border: 1px solid rgba(255,255,255,.2); border-radius: 50%; background: #a5b65d; box-shadow: 0 9px 26px rgba(31,54,37,.22); }
+    .bot-trigger:hover { background: #91a44b; box-shadow: 0 12px 32px rgba(31,54,37,.3); }
+    .bot-trigger svg path { fill: #193424; stroke: #193424; }
+    .bot-trigger svg circle { fill: #a5b65d; }
+    .chat-panel { width: min(410px,calc(100vw - 32px)); height: min(600px,calc(100vh - 120px)); border: 1px solid #dce0d5; border-radius: 10px; background: #f7f7f1; box-shadow: 0 24px 80px rgba(23,41,30,.2); }
+    .chat-header { padding: 17px 19px; background: #1d3729; border-color: rgba(235,240,220,.12); }
+    .chat-avatar { background: #a5b65d; }
+    .chat-avatar svg path { fill: #193424; }
+    .chat-header-name { color: #f5f4e9; }
+    .chat-header-status { color: #d0d8bb; }
+    .status-dot { background: #bdcf75; }
+    .chat-messages { padding: 18px; scrollbar-color: rgba(36,75,56,.22) transparent; }
+    .msg { font-size: 12px; }
+    .msg.bot { background: #fff; border: 1px solid #e3e5dc; color: #435348; border-radius: 11px; border-bottom-left-radius: 3px; box-shadow: 0 3px 10px rgba(23,41,30,.025); }
+    .msg.bot .answer-content h1,.msg.bot .answer-content h2,.msg.bot .answer-content h3 { color: #1d3729; }
+    .msg.user { background: #244b38; border-radius: 11px; border-bottom-right-radius: 3px; }
+    .msg.error { background: #fff6f0; border-color: #f0d7c7; color: #9b543a; }
+    .answer-sources { border-color: #e3e5dc; }
+    .answer-sources-title,.source-status { color: #858d81; }
+    .answer-source { color: #496144; }
+    .chip { border-color: #dce2cf; border-radius: 999px; background: #edf0e5; color: #496144; }
+    .chip:hover { background: #e3e9d5; }
+    .typing-dots span { background: #7e9452; }
+    .chat-input-row { border-color: #e2e4da; }
+    .chat-input { border-color: #dce0d5; border-radius: 7px; background: #fff; color: #203729; }
+    .chat-input::placeholder { color: #9aa196; }
+    .chat-input:focus { border-color: #71864c; }
+    .send-btn { border-radius: 7px; background: #244b38; }
+    .send-btn:hover { background: #183725; }
+    @media (max-width: 760px) {
+      nav { height: 68px; padding: 0 20px; }
+      .nav-links { display: none; }
+      .nav-cta { padding: 10px 15px; font-size: 10px; }
+      .hero { grid-template-columns: 1fr; min-height: unset; gap: 40px; padding: 68px 23px 52px; }
+      .hero h1 { font-size: clamp(56px,14vw,82px); letter-spacing: -3px; }
+      .hero-visual { min-height: 360px; padding: 20px; }
+      .visual-content { min-height: 260px; }
+      .visual-copy h2 { font-size: 26px; }
+      .pitch-graphic { max-width: 190px; }
+      .stats { display: grid; grid-template-columns: 1fr 1fr; padding: 0 14px; }
+      .stat-item { padding: 16px 10px; border-bottom: 1px solid #d9dbd0; }
+      .stat-item:nth-child(2) { border-right: 0; }
+      .stat-value { font-size: 19px; }
+      .stat-label { font-size: 8px; }
+      .section { padding: 70px 22px 80px; }
+      .section-approach { padding-top: 0; }
+      .assistant-callout { align-items: flex-start; flex-direction: column; }
+      .section-title { margin-bottom: 28px; }
+      .features-grid { grid-template-columns: 1fr; gap: 11px; }
+      .feature-card { min-height: unset; padding: 23px; }
+      .chat-panel { right: 16px; bottom: 88px; }
+      .bot-trigger { right: 18px; bottom: 18px; }
+      .bot-ping { right: 18px; bottom: 84px; }
+    }
+    @media (prefers-reduced-motion: reduce) { *,*::before,*::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; } }
   </style>
 </head>
 <body>
@@ -650,149 +783,110 @@
   <div class="blob blob-1"></div>
   <div class="blob blob-2"></div>
 
-  <!-- Nav -->
   <nav>
-    <a href="#" class="nav-logo">
-      <div class="logo-mark">
-        <svg viewBox="0 0 20 20" fill="none">
-          <circle cx="10" cy="10" r="8" stroke="white" stroke-width="1.5"/>
-          <path d="M7 10 L10 7 L13 10 L10 14Z" fill="white"/>
-        </svg>
-      </div>
+    <a href="#top" class="nav-logo" aria-label="Advanced Impactor home">
+      <div class="logo-mark"><svg viewBox="0 0 20 20" fill="none" aria-hidden="true"><circle cx="10" cy="10" r="8" stroke="white" stroke-width="1.5"/><path d="M7 10L10 7l3 3-3 4z" fill="white"/></svg></div>
       <span class="nav-brand">Advanced Impactor</span>
     </a>
     <ul class="nav-links">
-      <li><a href="#features">Features</a></li>
-      <li><a href="#">Coaches</a></li>
-      <li><a href="#">Analytics</a></li>
-      <li><a href="#">Pricing</a></li>
+      <li><a href="#features">Capabilities</a></li>
+      <li><a href="#approach">Our approach</a></li>
+      <li><a href="#chatPanel" onclick="toggleChat()">Knowledge assistant</a></li>
     </ul>
-    <button class="nav-cta">Get Started</button>
+    <button class="nav-cta" onclick="toggleChat()">Ask the assistant <span aria-hidden="true">↗</span></button>
   </nav>
 
-  <!-- Hero -->
-  <div class="hero">
-    <div class="hero-tag">
-      <span class="hero-tag-dot"></span>
-      AI-Powered Cricket Platform
-    </div>
-    <h1>Train smarter.<br><span class="accent">Perform better.</span></h1>
-    <p class="hero-sub">Real-time AI coaching, video analysis, and performance insights — built for every cricketer from aspiring players to elite coaches.</p>
-    <div class="hero-btns">
-      <button class="btn-primary">Start Free Trial</button>
-      <button class="btn-ghost">Watch Demo</button>
-    </div>
-  </div>
-
-  <!-- Stats -->
-  <div class="stats">
-    <div class="stat-item">
-      <div class="stat-value">10<span>K+</span></div>
-      <div class="stat-label">Players trained</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-value">98<span>%</span></div>
-      <div class="stat-label">AI accuracy</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-value">500<span>+</span></div>
-      <div class="stat-label">Certified coaches</div>
-    </div>
-    <div class="stat-item">
-      <div class="stat-value">24<span>/7</span></div>
-      <div class="stat-label">AI availability</div>
-    </div>
-  </div>
-
-  <!-- Features -->
-  <div class="section" id="features">
-    <div class="section-label">What we offer</div>
-    <div class="section-title">Everything a cricketer needs</div>
-    <div class="features-grid">
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg viewBox="0 0 20 20" fill="none">
-            <rect x="2" y="3" width="16" height="11" rx="2" stroke="#4d8fff" stroke-width="1.4"/>
-            <path d="M7 17h6" stroke="#4d8fff" stroke-width="1.4" stroke-linecap="round"/>
-            <path d="M8 8l3-3 3 3" stroke="#4d8fff" stroke-width="1.2" stroke-linecap="round" stroke-linejoin="round"/>
-          </svg>
+  <main id="top">
+    <section class="hero" aria-labelledby="hero-title">
+      <div class="hero-copy">
+        <div class="hero-tag"><span class="hero-tag-dot"></span> CRICKET PERFORMANCE INTELLIGENCE</div>
+        <h1 id="hero-title">See the detail.<br><span class="accent">Shape the next ball.</span></h1>
+        <p class="hero-sub">A clearer view of cricket performance. Bring video review, ball tracking and coaching insight into one thoughtful development conversation.</p>
+        <div class="hero-btns">
+          <a class="btn-primary" href="#features">Explore capabilities <span aria-hidden="true">↓</span></a>
+          <button class="btn-ghost" onclick="toggleChat()">Ask the knowledge assistant</button>
         </div>
-        <div class="feature-title">AI Video Analysis</div>
-        <div class="feature-desc">Upload your session and get instant AI feedback on batting technique, bowling posture, impact position, and trajectory — in seconds.</div>
+        <p class="hero-note"><span>VIDEO · ANALYSIS · DEVELOPMENT</span> &nbsp; Capabilities reflect public product descriptions.</p>
       </div>
 
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg viewBox="0 0 20 20" fill="none">
-            <path d="M3 14 L7 9 L11 11 L15 5 L18 8" stroke="#4d8fff" stroke-width="1.4" stroke-linecap="round" stroke-linejoin="round"/>
-            <circle cx="7" cy="9" r="1.5" fill="#4d8fff"/>
-            <circle cx="15" cy="5" r="1.5" fill="#4d8fff"/>
+      <div class="hero-visual" aria-label="Illustrative cricket delivery analysis graphic">
+        <div class="visual-topbar"><span>FIELD NOTES &nbsp; / &nbsp; 01</span><span class="visual-tag">ILLUSTRATIVE VIEW</span></div>
+        <div class="visual-content">
+          <div class="visual-copy">
+            <small>DELIVERY REVIEW</small>
+            <h2>One ball.<br>More to see.</h2>
+            <p>Break a delivery into moments that are easier to discuss and review.</p>
+            <div class="event-list">
+              <div class="event-row"><span class="event-index">01</span> Release</div>
+              <div class="event-row"><span class="event-index">02</span> Pitch</div>
+              <div class="event-row"><span class="event-index">03</span> Impact</div>
+            </div>
+          </div>
+          <svg class="pitch-graphic" viewBox="0 0 220 300" fill="none" role="img" aria-label="Illustrative ball path across a cricket pitch">
+            <rect x="34" y="12" width="152" height="276" rx="72" fill="#526b48" stroke="#94a77c" stroke-opacity=".55"/>
+            <rect x="78" y="42" width="64" height="216" rx="3" fill="#d5caa4" fill-opacity=".88"/>
+            <path d="M91 55v14m8-14v14m8-14v14m8-14v14m8-14v14M91 231v14m8-14v14m8-14v14m8-14v14m8-14v14" stroke="#344536" stroke-width="2" stroke-linecap="round"/>
+            <path d="M110 78c-22 42 24 48 5 85-12 23-22 32-9 55" stroke="#e9efc6" stroke-width="2" stroke-dasharray="4 6"/>
+            <circle cx="110" cy="78" r="6" fill="#d0e07f" stroke="#253c2c" stroke-width="3"/>
+            <circle cx="115" cy="163" r="6" fill="#d0e07f" stroke="#253c2c" stroke-width="3"/>
+            <circle cx="106" cy="218" r="6" fill="#d0e07f" stroke="#253c2c" stroke-width="3"/>
+            <path d="M26 78h34m100 0h34M26 218h34m100 0h34" stroke="#b8c6a5" stroke-opacity=".55" stroke-width="1" stroke-dasharray="3 5"/>
           </svg>
+          <div class="visual-caption">Concept illustration · not live match data</div>
         </div>
-        <div class="feature-title">Performance Tracking</div>
-        <div class="feature-desc">Track batting and bowling stats over time. Compare against professional benchmarks and get AI-driven improvement suggestions.</div>
       </div>
+    </section>
 
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg viewBox="0 0 20 20" fill="none">
-            <path d="M10 2C5.58 2 2 5.13 2 9c0 2.16 1.02 4.08 2.64 5.44L4 18l3.6-1.44A8.5 8.5 0 0010 17c4.42 0 8-3.13 8-7s-3.58-8-8-8z" stroke="#4d8fff" stroke-width="1.4"/>
-            <circle cx="7" cy="9" r="1" fill="#4d8fff"/>
-            <circle cx="10" cy="9" r="1" fill="#4d8fff"/>
-            <circle cx="13" cy="9" r="1" fill="#4d8fff"/>
-          </svg>
-        </div>
-        <div class="feature-title">AI Virtual Coach</div>
-        <div class="feature-desc">Ask your AI coach anything — match strategies, drill suggestions, or technique tips. Available 24/7, voice-enabled, and context-aware.</div>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg viewBox="0 0 20 20" fill="none">
-            <rect x="2" y="2" width="7" height="7" rx="1.5" stroke="#4d8fff" stroke-width="1.4"/>
-            <rect x="11" y="2" width="7" height="7" rx="1.5" stroke="#4d8fff" stroke-width="1.4"/>
-            <rect x="2" y="11" width="7" height="7" rx="1.5" stroke="#4d8fff" stroke-width="1.4"/>
-            <rect x="11" y="11" width="7" height="7" rx="1.5" stroke="#4d8fff" stroke-width="1.4"/>
-          </svg>
-        </div>
-        <div class="feature-title">Coach Dashboard</div>
-        <div class="feature-desc">Manage all your players in one place. Assign custom drills, track progress, review session videos, and share feedback instantly.</div>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg viewBox="0 0 20 20" fill="none">
-            <polygon points="10,2 12.5,7.5 18,8.2 14,12 15.2,18 10,15 4.8,18 6,12 2,8.2 7.5,7.5" stroke="#4d8fff" stroke-width="1.3" fill="none"/>
-          </svg>
-        </div>
-        <div class="feature-title">Gamification</div>
-        <div class="feature-desc">Earn badges, climb leaderboards, and complete skill challenges. Stay motivated with friendly competition and milestone rewards.</div>
-      </div>
-
-      <div class="feature-card">
-        <div class="feature-icon">
-          <svg viewBox="0 0 20 20" fill="none">
-            <circle cx="10" cy="7" r="4" stroke="#4d8fff" stroke-width="1.4"/>
-            <path d="M3 18c0-3.87 3.13-7 7-7s7 3.13 7 7" stroke="#4d8fff" stroke-width="1.4" stroke-linecap="round"/>
-          </svg>
-        </div>
-        <div class="feature-title">Scouting Tools</div>
-        <div class="feature-desc">Discover promising players using AI performance data. Access player reports, skill trends, and coordinate trials directly on the platform.</div>
-      </div>
-
+    <div class="stats" aria-label="Core areas">
+      <div class="stat-item"><div class="stat-value">VIDEO</div><div class="stat-label">Frame-by-frame review</div></div>
+      <div class="stat-item"><div class="stat-value">BALL</div><div class="stat-label">Release · pitch · impact</div></div>
+      <div class="stat-item"><div class="stat-value">COACH</div><div class="stat-label">Player and academy context</div></div>
     </div>
-  </div>
 
-  <footer>
-    &copy; 2024 Advanced Impactor &amp; Copper Digital. All rights reserved.
-  </footer>
+    <section class="section" id="features" aria-labelledby="features-title">
+      <div class="section-label">THE PERFORMANCE TOOLKIT</div>
+      <h2 class="section-title" id="features-title">Turn footage into a better conversation.</h2>
+      <div class="features-grid">
+        <article class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 20 20" fill="none"><rect x="2" y="3" width="16" height="11" rx="2" stroke-width="1.4"/><path d="M7 17h6M8 8l3-3 3 3" stroke-width="1.3" stroke-linecap="round" stroke-linejoin="round"/></svg></div>
+          <h3 class="feature-title">Video, frame by frame</h3>
+          <p class="feature-desc">Review cricket footage, annotate key moments and compare technique. Public listings also describe offline use and a standalone annotation tool.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M3 15 7 10l4 2 6-8" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/><circle cx="7" cy="10" r="1.4" fill="#526a3d"/><circle cx="17" cy="4" r="1.4" fill="#526a3d"/></svg></div>
+          <h3 class="feature-title">A delivery, in context</h3>
+          <p class="feature-desc">Ball tracking visualizes release, pitch and impact points. Listed bowling analysis includes speed, line, length and deviation; measurement accuracy depends on conditions.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 20 20" fill="none"><path d="M10 2C5.6 2 2 5.1 2 9c0 2.2 1 4.1 2.6 5.4L4 18l3.6-1.4A8.5 8.5 0 0 0 10 17c4.4 0 8-3.1 8-7s-3.6-8-8-8Z" stroke-width="1.4"/><path d="M7 9h.01M10 9h.01M13 9h.01" stroke-width="2" stroke-linecap="round"/></svg></div>
+          <h3 class="feature-title">Technique with a point of view</h3>
+          <p class="feature-desc">Batting and bowling analysis surfaces technical observations and development insights to support coaching decisions.</p>
+        </article>
+        <article class="feature-card">
+          <div class="feature-icon"><svg viewBox="0 0 20 20" fill="none"><rect x="2" y="2" width="7" height="7" rx="1.5" stroke-width="1.4"/><rect x="11" y="2" width="7" height="7" rx="1.5" stroke-width="1.4"/><rect x="2" y="11" width="7" height="7" rx="1.5" stroke-width="1.4"/><rect x="11" y="11" width="7" height="7" rx="1.5" stroke-width="1.4"/></svg></div>
+          <h3 class="feature-title">Built for the wider team</h3>
+          <p class="feature-desc">CoachPlex and Advanced Impactor Pro are publicly positioned around coaching or academy operations. Their exact product relationship is still unconfirmed.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section section-approach" id="approach" aria-labelledby="approach-title">
+      <div class="section-label">A MORE USEFUL VIEW</div>
+      <h2 class="section-title" id="approach-title">Better questions start with better evidence.</h2>
+      <div class="feature-card assistant-callout">
+        <div><h3 class="feature-title">Ask about the company, products or technology.</h3><p class="feature-desc">The knowledge assistant answers from documented sources and shows where its information comes from. Historical and unverified details are identified as such.</p></div>
+        <button class="btn-primary" onclick="toggleChat()">Open assistant <span aria-hidden="true">↗</span></button>
+      </div>
+    </section>
+  </main>
+
+  <footer>&copy; 2026 Advanced Impactor &nbsp;·&nbsp; Product details reflect documented public sources and may vary by app version.</footer>
 
   <!-- ════════════════════════════
        CHATBOT WIDGET
   ════════════════════════════ -->
 
-  <div class="bot-ping" id="ping">I'm your AI assistant 👋</div>
+  <div class="bot-ping" id="ping">Questions? Start here.</div>
 
   <button class="bot-trigger" id="botBtn" onclick="toggleChat()">
     <svg class="icon-chat" viewBox="0 0 24 24" fill="none">
