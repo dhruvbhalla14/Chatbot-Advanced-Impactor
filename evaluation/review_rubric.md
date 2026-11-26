@@ -9,5 +9,5 @@ The automated checks are reproducible but do not prove factual correctness. Revi
 5. **Hallucination prevention:** For missing or unverified facts, does the answer clearly state the evidence gap? In particular, do not assert revenue, customer counts, current partnership terms, Pro/CoachPlex equivalence, model accuracy, or completion of the Lord's showcase without evidence.
 6. **Historical and classification handling:** Are old architecture and dataset figures labeled HISTORICAL, internal claims labeled INTERNAL_CONTEXT, and interpretations labeled ANALYTICAL?
 
-The 32-question answer-level expectations are in answer_expectations.json. The answer runner calls Gemini, checkpoints each completed result in an ignored local JSONL file, and can resume after quota is available. Its phrase checks are heuristics; they are not a judge model or published benchmark.
+The 32-question answer-level expectations are in answer_expectations.json. The answer runner calls OpenAI, checkpoints each completed result in an ignored local JSONL file, and can resume after quota is available. Its phrase checks are heuristics; they are not a judge model or published benchmark.
 

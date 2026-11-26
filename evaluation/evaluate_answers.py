@@ -1,4 +1,4 @@
-"""Run answer-level checks through Gemini.
+"""Run answer-level checks through OpenAI.
 
 Answers are checkpointed locally so a free-tier quota interruption can be resumed.
 The automated checks are screening heuristics, not a substitute for expert review.

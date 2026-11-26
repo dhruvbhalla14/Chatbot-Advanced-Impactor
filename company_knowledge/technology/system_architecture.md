@@ -23,5 +23,5 @@ keywords: [system architecture, AWS Lambda, Node.js, Python, MongoDB, S3, queue,
 The brief does not identify queues, exact functions, schemas, security controls, deployment regions, current service status, or ownership boundaries. Do not infer those details.
 
 ## This repository's chatbot
-[INTERNAL_CONTEXT] The inspected standalone chatbot uses FastAPI, LangChain, Google Gemini embeddings/chat, and local FAISS. It is not evidence of the public app's production architecture.
+[INTERNAL_CONTEXT] The inspected standalone chatbot uses FastAPI, LangChain, OpenAI embeddings/chat, and local FAISS. It is not evidence of the public app's production architecture.
 

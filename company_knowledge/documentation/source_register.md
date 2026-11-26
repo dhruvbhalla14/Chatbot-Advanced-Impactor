@@ -28,6 +28,6 @@ source_urls:
 
 ## Internal sources and method
 - **User-supplied project brief (2026-11-26):** Source of architecture, event labels, camera setup, historical dataset counts, company objectives, and operations context. Claims are marked INTERNAL_CONTEXT or HISTORICAL because the source artifacts were not provided with that brief.
-- **Repository inspection:** This standalone project uses FastAPI, LangChain, Gemini, and local FAISS; based on checked source code, not public mobile app architecture.
+- **Repository inspection:** This standalone project uses FastAPI, LangChain, OpenAI, and local FAISS; based on checked source code, not public mobile app architecture.
 - Public sources were checked on 2026-11-26. Store descriptions and event pages can change; consult live pages for current details.
 

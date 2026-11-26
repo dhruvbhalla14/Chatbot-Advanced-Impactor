@@ -1,5 +1,7 @@
 {
-  "version": 2,
+  "version": 3,
+  "embedding_provider": "openai",
+  "embedding_model": "text-embedding-3-small",
   "sources": {
     "company_knowledge/business/business_analysis.md": {
       "sha256": "03f762262de4a9290e158d7f335b40ae4fe6cd0927e36e5a7bd5c8e8b4026482",
@@ -8,6 +10,16 @@
         "cec7392451ebbdedebe54f3eaa11b41131fe323f736e8ad01d6b99c5bb91a4c9",
         "67b3f0e4db48b4a06d37256e641bf8af30a81737441d5dbefd943f7326c263c0",
         "64debd9ab86834dd5a615c0b0be5b747a5bd9ad063fc51a6da04ce1b484a0a9a"
+      ]
+    },
+    "company_knowledge/business/company_history.md": {
+      "sha256": "f7e8c17a174a29059ef30484dd503748aefbb19f93dd7843dd6c06e437b653d8",
+      "ids": [
+        "222efbcafa50db7424d4a6306032649a6b0425b9df4e683bc3bdc209febdc60c",
+        "b9e69eff06010cc44efb45c455ecb348a900bd63404910eb3e062acbb0dde237",
+        "a766c1acf9392769f412afe1578a0837a6f4ecec62ccf65ebe7d5bf29671a0fc",
+        "e3718944b72727c4ae984a2752e3f098090d20eefe0833d6e01cea2b4f9cf1e5",
+        "ebecf8b57af23bb83b6f7620ec4a71424fae269228494c0395989ad3d9130181"
       ]
     },
     "company_knowledge/business/marketing_and_positioning.md": {
@@ -56,6 +68,16 @@
         "c97430159560866c8661407fb101b84ee6ca3268d48968335781311565ca0a1f",
         "6625af7e1b485f12f41c59126d836118f03abc53fff4d1943ede009cecc67958",
         "4ddf442e3252d3128d27be4a40455b61d703707fe942fadccdc22295b6b5ac9d"
+      ]
+    },
+    "company_knowledge/documentation/source_register.md": {
+      "sha256": "4afde6763277f7dd66ac4a54b87474927b29dd76ada31de2f692faa62e668d35",
+      "ids": [
+        "31b3f47a2a90704b344177e8e7c3a50aa4f02b3ee6ffa8620c2b642910cd10fa",
+        "3a2cb48346d67de695f759439afbba1827b3718638211e44e62a3859ee51be04",
+        "71fe5bf45418c8b7d58625bf0f1d4b5b0502399c0acce96fb3137c0795fd22b1",
+        "a65cd69b61224a040cafa58b71f967a24fbd90419eb4cf5c4e630f0d160ae012",
+        "3cef61cb45e737accc04f52967356f92f5820e51a9b89a0ffcc1228c09743d49"
       ]
     },
     "company_knowledge/documentation/terminology.md": {
@@ -204,6 +226,16 @@
         "eb6a094b2fbc681f3ebfe0ba6508e771cd66d6d04b805f6456adb405729a9330"
       ]
     },
+    "company_knowledge/products/product_comparison.md": {
+      "sha256": "fafe60104f2a55b011be5d62165e9869c3ab47513cc5dd5842bb7fd9ea8e5f07",
+      "ids": [
+        "dee6f07c4ff580be03fa0f8eb18a5c07d674a0643790a6034730b73e8f54dd23",
+        "179e665997c30457e9fa3ff25102b496b4fe52cae8ff9c67ad8286f70ef935be",
+        "d54f235be050f3bad9fe05da9be387276cc00c592996cd5daf24ca7a739861b5",
+        "1175089ea191917f0c80fd5708757a2e6f62705c863e124edaa7784b446a1c66",
+        "b5689a6afe933e988d55d217ae197ddc38db83a4f50f1c41f15979477f4514ae"
+      ]
+    },
     "company_knowledge/technology/ai_ml_pipeline.md": {
       "sha256": "c9be581fb8cecdd678d1b435eef10b316afee3735854bdddb2f13e8e4e321404",
       "ids": [
@@ -232,22 +264,22 @@
       ]
     },
     "company_knowledge/technology/internal_rag_system.md": {
-      "sha256": "ae31d1f5b8da5bb645d41d32061dafce4c99dde33a16d2db38b01a2e2c239408",
+      "sha256": "79e48db18b32e6c950ff9b6006cd30dec467a8e33651717cda2ab162707c8d1f",
       "ids": [
-        "656d9b191c94effcf7f53a7c576c8f3e006a89b75fd9f53308b278b65553fd8b",
-        "7a3fa2211dc5cf202a74e5ad19ea10dc33e44c360d86565d7737e743b0f4d3c4",
-        "14a2baed52ee3474e904ea97be2b33827447f6356d22196af90755dcd8e5d653",
-        "01511433b7bf76fc7fdc35c81cabbf6fe62d50f2f81dc32d1b9afde8f7044bc6"
+        "ee9264377843f9dbeea3170e0e9376125239636e19622ad334285eb62a1b95d0",
+        "6288b2667a7089a61c59ab75d0766b871b9366acc8cbc2695fbe3d8ee4db1f78",
+        "fa65a0553654494ec5d9d28b29e2244d522da501cb81736ffce5630b05271cd7",
+        "c51f8fb425088547daa4fcc9571c5d2db1e922bf8497a5c814b70fd0fcace2cc"
       ]
     },
     "company_knowledge/technology/system_architecture.md": {
-      "sha256": "bdc8017736d7ec97a6b74e7000de4799f5b018521f65141b7b3e0608176e8f1f",
+      "sha256": "7d51712f325f2fd8dec3c481d99292146d5868be50adeb8f7c7bcef1758294ca",
       "ids": [
-        "acfb4598c000285f4a7e7a273e26adf3fab68a31af92c69d17013e2e7f62857f",
-        "5940a0785b9c5a6a4a5b300022c46b06769dbc45a34d56e965a6acf750449262",
-        "3d6ed773c689da753dd8542e5408eeeb6fa2dbaf735493e36656bd96b0530ba8",
-        "6dd1954d3000e6dfaf0d9d96620fb7b0fb02e23a76fe91dade53386459ca7735",
-        "a187bf27687c9da504e17c08505e91aec92bbc7005eb5455ac9ca153f3a86977"
+        "9cc7be8447450818e02352b63cd1c8afbd28387e75c6056ff1d743e9c88ff2fb",
+        "8bfa49204fe6864d5247a0ca5c501f78efea902eb0e7a592ab821fb841481c4d",
+        "3ddd62bcf6d0a6312cb67b55bf16172c9e8cdb2e8e22cced87e10cc8e4bc10b2",
+        "5dd873bb190b4178e32a72c8abb0f41ce691bb2dac5cc491efe8fcd0516b1e05",
+        "093678c9402894939ab2c6a7b664b0533795d0fec1c5b015a9835f9a276cc484"
       ]
     },
     "company_knowledge/technology/video_processing_pipeline.md": {
@@ -305,6 +337,22 @@
         "c45127238472cb77314b9ae01764a82970f76195d04d352dff40db3f30545dc2",
         "b33df9f8a36cd085863168918d5f10cb471ead345deab0b524a4202c96ab4aa7",
         "f7906317ef0209f19ecade6ffac953e558d2b70518841ff2f7fae327827512c0"
+      ]
+    },
+    "data/04_Cookie_Policy.docx": {
+      "sha256": "d76c7d91f230a16f7ba394f0e17ef0d75df2330971b24f1314ac6e75eb965197",
+      "ids": [
+        "191b3edacc7a1c44d2cc0bb11350dd2bf4f43d2f301f2e2e67d68413e65978d8",
+        "c0b58d9ee449e85ee86230213162f761e8225f4b47b10055e145e9385c29c3ba",
+        "aa51f781f3ed0bac5f0ebab9bba5f69a90eaec718aea76ba8a2945e55a026e4d",
+        "aa45d4ff46812abf8a32e394200afd05e833a34fa32e7ba8e97ce7ae20882267",
+        "2b5158311e72ffe30706da8cccf8b47db14cacf5d4f42a6b48110a6c22927900",
+        "83ed9d582a105f7d498e02cf541a0e6b23c476472274cd4e3438b6f4065c3524",
+        "cc9573e9e8c61cbaf6911d09d29327256840a0cd5e089404262ff879dea2f950",
+        "7962c07487d73d6f98eb1ab9bb1644002dfc04023be2fe4417836c0a09b51f44",
+        "b727afc8c18bf9be598c5ab423f6aa1efa33b3fe9b66998d69cd72091c6d3a09",
+        "ce69b69c5f381ac58340bf72dc7f34f087ca5a7a35d0e0a858b277183f5f7a5c",
+        "b60c2ab987bda07f2d90a892e5d9c3792dc03a51618e19fbaec26d5ddb4e350c"
       ]
     },
     "data/05_Coaches_Academy_Terms.docx": {
@@ -424,52 +472,6 @@
       "sha256": "32a4baa28cc4da15b1b12fe318f1f8c6c4a8d37050f167eaa00fbae570c356d2",
       "ids": [
         "6f22911753cf409628eb082e9b9c54a3dde6b29c1091dd1a9a9b4bef600acfed"
-      ]
-    },
-    "company_knowledge/business/company_history.md": {
-      "sha256": "f7e8c17a174a29059ef30484dd503748aefbb19f93dd7843dd6c06e437b653d8",
-      "ids": [
-        "222efbcafa50db7424d4a6306032649a6b0425b9df4e683bc3bdc209febdc60c",
-        "b9e69eff06010cc44efb45c455ecb348a900bd63404910eb3e062acbb0dde237",
-        "a766c1acf9392769f412afe1578a0837a6f4ecec62ccf65ebe7d5bf29671a0fc",
-        "e3718944b72727c4ae984a2752e3f098090d20eefe0833d6e01cea2b4f9cf1e5",
-        "ebecf8b57af23bb83b6f7620ec4a71424fae269228494c0395989ad3d9130181"
-      ]
-    },
-    "company_knowledge/documentation/source_register.md": {
-      "sha256": "266cb8f14495825e168c58ac790fb8661f0b73faba6965808a0e9501524010b3",
-      "ids": [
-        "00c3376f98cbc63e4996b90a59a2485b6ba0a84cc88d776d83fd7be6528d9dd4",
-        "2897be6a036c4df8e6387b08370d04ada7a1ef76a5863fecf3908972f8e3dfa5",
-        "57646499ed4035b7757f698201ee302b8b453e0c5eb72a01b0a63d5a73ce2b6d",
-        "aaf5026de453ab1a2535cffbc630bc8a9a0a25ae5d48ab585c3bc2960435af86",
-        "3662a1fb367de3e9112106a81ce99efb13bd4b1c85fc36648693df62f71255a3"
-      ]
-    },
-    "data/04_Cookie_Policy.docx": {
-      "sha256": "d76c7d91f230a16f7ba394f0e17ef0d75df2330971b24f1314ac6e75eb965197",
-      "ids": [
-        "191b3edacc7a1c44d2cc0bb11350dd2bf4f43d2f301f2e2e67d68413e65978d8",
-        "c0b58d9ee449e85ee86230213162f761e8225f4b47b10055e145e9385c29c3ba",
-        "aa51f781f3ed0bac5f0ebab9bba5f69a90eaec718aea76ba8a2945e55a026e4d",
-        "aa45d4ff46812abf8a32e394200afd05e833a34fa32e7ba8e97ce7ae20882267",
-        "2b5158311e72ffe30706da8cccf8b47db14cacf5d4f42a6b48110a6c22927900",
-        "83ed9d582a105f7d498e02cf541a0e6b23c476472274cd4e3438b6f4065c3524",
-        "cc9573e9e8c61cbaf6911d09d29327256840a0cd5e089404262ff879dea2f950",
-        "7962c07487d73d6f98eb1ab9bb1644002dfc04023be2fe4417836c0a09b51f44",
-        "b727afc8c18bf9be598c5ab423f6aa1efa33b3fe9b66998d69cd72091c6d3a09",
-        "ce69b69c5f381ac58340bf72dc7f34f087ca5a7a35d0e0a858b277183f5f7a5c",
-        "b60c2ab987bda07f2d90a892e5d9c3792dc03a51618e19fbaec26d5ddb4e350c"
-      ]
-    },
-    "company_knowledge/products/product_comparison.md": {
-      "sha256": "fafe60104f2a55b011be5d62165e9869c3ab47513cc5dd5842bb7fd9ea8e5f07",
-      "ids": [
-        "dee6f07c4ff580be03fa0f8eb18a5c07d674a0643790a6034730b73e8f54dd23",
-        "179e665997c30457e9fa3ff25102b496b4fe52cae8ff9c67ad8286f70ef935be",
-        "d54f235be050f3bad9fe05da9be387276cc00c592996cd5daf24ca7a739861b5",
-        "1175089ea191917f0c80fd5708757a2e6f62705c863e124edaa7784b446a1c66",
-        "b5689a6afe933e988d55d217ae197ddc38db83a4f50f1c41f15979477f4514ae"
       ]
     }
   },

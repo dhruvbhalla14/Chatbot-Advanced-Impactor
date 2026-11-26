@@ -1,7 +1,7 @@
 """Evaluate top-k source retrieval against the curated question set.
 
 Default mode is offline lexical retrieval to avoid API calls. Use --semantic to also
-query the configured Gemini embedding endpoint. Use --sync to refresh the index first.
+query the configured OpenAI embedding endpoint. Use --sync to refresh the index first.
 """
 from __future__ import annotations
 
@@ -24,7 +24,12 @@ def main() -> int:
     parser.add_argument("--k", type=int, default=5)
     args = parser.parse_args()
 
-    vectorstore = sync_vectorstore() if args.sync else load_vectorstore()
+    if args.sync:
+        vectorstore = sync_vectorstore()
+    elif args.semantic:
+        vectorstore = load_vectorstore()
+    else:
+        vectorstore = load_vectorstore(lexical_only=True)
     dataset = json.loads(DATASET.read_text(encoding="utf-8"))
     rows = []
     for item in dataset["questions"]:

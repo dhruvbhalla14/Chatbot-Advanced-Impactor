@@ -18,7 +18,8 @@ from dotenv import load_dotenv
 from langchain_community.document_loaders import Docx2txtLoader, PyPDFLoader
 from langchain_community.vectorstores import FAISS
 from langchain_core.documents import Document
-from langchain_google_genai import ChatGoogleGenerativeAI, GoogleGenerativeAIEmbeddings
+from langchain_core.embeddings import FakeEmbeddings
+from langchain_openai import ChatOpenAI, OpenAIEmbeddings
 from langchain_text_splitters import RecursiveCharacterTextSplitter
 from pptx import Presentation
 from lxml import etree
@@ -30,14 +31,14 @@ DATA_DIR = BASE_DIR / "data"
 KNOWLEDGE_DIR = BASE_DIR / "company_knowledge"
 VECTORSTORE_DIR = BASE_DIR / "vectorstore"
 MANIFEST_PATH = VECTORSTORE_DIR / "manifest.json"
-EMBEDDING_MODEL = os.getenv("GEMINI_EMBEDDING_MODEL", "models/gemini-embedding-001")
-CHAT_MODEL = os.getenv("GEMINI_CHAT_MODEL", "gemini-2.5-flash")
+EMBEDDING_MODEL = os.getenv("OPENAI_EMBEDDING_MODEL", "text-embedding-3-small")
+CHAT_MODEL = os.getenv("OPENAI_CHAT_MODEL", "gpt-5.4-mini")
 CHUNK_SIZE = 1000
 CHUNK_OVERLAP = 140
 MAX_CONTEXT_CHARS = 14000
 MAX_RETRIEVAL = 8
 EMBEDDING_BATCH_SIZE = 50
-EMBEDDING_PAUSE_SECONDS = float(os.getenv("EMBEDDING_PAUSE_SECONDS", "31"))
+EMBEDDING_PAUSE_SECONDS = float(os.getenv("EMBEDDING_PAUSE_SECONDS", "1"))
 LOAD_ERRORS: list[dict[str, str]] = []
 
 SYSTEM_PROMPT = """You are the Advanced Impactor company knowledge assistant.
@@ -221,8 +222,17 @@ def _source_hash(path: Path) -> str:
     return digest.hexdigest()
 
 
-def _embeddings() -> GoogleGenerativeAIEmbeddings:
-    return GoogleGenerativeAIEmbeddings(model=EMBEDDING_MODEL)
+def _manifest_uses_current_embeddings(manifest: dict[str, Any]) -> bool:
+    return (
+        manifest.get("embedding_provider") == "openai"
+        and manifest.get("embedding_model") == EMBEDDING_MODEL
+    )
+
+
+def _embeddings() -> OpenAIEmbeddings:
+    if not os.getenv("OPENAI_API_KEY"):
+        raise RuntimeError("OPENAI_API_KEY is missing. Add a valid OpenAI API key to .env before indexing or starting the API.")
+    return OpenAIEmbeddings(model=EMBEDDING_MODEL)
 
 
 def sync_vectorstore() -> FAISS:
@@ -236,31 +246,35 @@ def sync_vectorstore() -> FAISS:
     if MANIFEST_PATH.exists():
         old_manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8"))
     source_map: dict[str, Any] = old_manifest.get("sources", {})
-    legacy_exists = (VECTORSTORE_DIR / "index.faiss").exists() and not MANIFEST_PATH.exists()
+    index_exists = (VECTORSTORE_DIR / "index.faiss").exists()
+    legacy_exists = index_exists and not MANIFEST_PATH.exists()
+    embedding_changed = index_exists and not _manifest_uses_current_embeddings(old_manifest)
+    rebuild_index = legacy_exists or embedding_changed
     vectorstore: FAISS | None = None
     embeddings = _embeddings()
-    if not legacy_exists and (VECTORSTORE_DIR / "index.faiss").exists():
+    if not rebuild_index and index_exists:
         vectorstore = FAISS.load_local(str(VECTORSTORE_DIR), embeddings, allow_dangerous_deserialization=True)
 
-    removed = set(source_map) - set(current)
-    changed = {name for name, (_, digest) in current.items() if source_map.get(name, {}).get("sha256") != digest}
-    changed.update(name for name, record in source_map.items() if name in current and not record.get("ids"))
-    LOAD_ERRORS.extend(
-        item for item in old_manifest.get("source_errors", [])
-        if item.get("source") not in removed | changed
-    )
-    to_delete: list[str] = []
-    for name in removed | changed:
-        to_delete.extend(source_map.get(name, {}).get("ids", []))
-
-    if legacy_exists:
-        print("Legacy FAISS index has no source manifest; rebuilding it so the new knowledge can be indexed safely.")
+    if rebuild_index:
+        reason = "embedding model changed" if embedding_changed else "legacy index has no source manifest"
+        print(f"FAISS {reason}; rebuilding all vectors with {EMBEDDING_MODEL}.")
         vectorstore = None
         source_map = {}
         changed = set(current)
         removed = set()
-    elif vectorstore is not None and to_delete:
-        vectorstore.delete(ids=to_delete)
+    else:
+        removed = set(source_map) - set(current)
+        changed = {name for name, (_, digest) in current.items() if source_map.get(name, {}).get("sha256") != digest}
+        changed.update(name for name, record in source_map.items() if name in current and not record.get("ids"))
+        LOAD_ERRORS.extend(
+            item for item in old_manifest.get("source_errors", [])
+            if item.get("source") not in removed | changed
+        )
+        to_delete: list[str] = []
+        for name in removed | changed:
+            to_delete.extend(source_map.get(name, {}).get("ids", []))
+        if vectorstore is not None and to_delete:
+            vectorstore.delete(ids=to_delete)
 
     docs_by_source: dict[str, list[Document]] = {}
     if changed:
@@ -293,7 +307,7 @@ def sync_vectorstore() -> FAISS:
         except Exception as exc:
             first_source = batch_docs[0].metadata.get("source", "unknown")
             raise RuntimeError(
-                f"Gemini embedding failed near {first_source}, chunk batch starting at {offset}: "
+                f"OpenAI embedding failed near {first_source}, chunk batch starting at {offset}: "
                 f"{type(exc).__name__}: {exc}"
             ) from exc
         next_offset = offset + EMBEDDING_BATCH_SIZE
@@ -312,16 +326,28 @@ def sync_vectorstore() -> FAISS:
     VECTORSTORE_DIR.mkdir(parents=True, exist_ok=True)
     vectorstore.save_local(str(VECTORSTORE_DIR))
     tmp_manifest = MANIFEST_PATH.with_suffix(".tmp")
-    tmp_manifest.write_text(json.dumps({"version": 2, "sources": updated_map, "source_errors": LOAD_ERRORS}, indent=2), encoding="utf-8")
+    tmp_manifest.write_text(json.dumps({
+        "version": 3,
+        "embedding_provider": "openai",
+        "embedding_model": EMBEDDING_MODEL,
+        "sources": updated_map,
+        "source_errors": LOAD_ERRORS,
+    }, indent=2), encoding="utf-8")
     tmp_manifest.replace(MANIFEST_PATH)
     print(f"Index synchronized: {len(changed)} changed/new source(s), {len(removed)} removed source(s), {len(updated_map)} total.")
     return vectorstore
 
 
-def load_vectorstore() -> FAISS:
+def load_vectorstore(*, lexical_only: bool = False) -> FAISS:
     if not (VECTORSTORE_DIR / "index.faiss").exists():
         raise FileNotFoundError("No FAISS index exists. Run `python -m app.rag --sync` first.")
-    return FAISS.load_local(str(VECTORSTORE_DIR), _embeddings(), allow_dangerous_deserialization=True)
+    manifest = json.loads(MANIFEST_PATH.read_text(encoding="utf-8")) if MANIFEST_PATH.exists() else {}
+    if not lexical_only and not _manifest_uses_current_embeddings(manifest):
+        raise RuntimeError(
+            f"The FAISS index does not use {EMBEDDING_MODEL}. Run `python -m app.rag --sync` to rebuild it."
+        )
+    embeddings = FakeEmbeddings(size=1) if lexical_only else _embeddings()
+    return FAISS.load_local(str(VECTORSTORE_DIR), embeddings, allow_dangerous_deserialization=True)
 
 
 def _all_indexed_documents(vectorstore: FAISS) -> list[Document]:
@@ -524,7 +550,7 @@ def answer_question(
     context = "\n\n".join(context_parts)
     prompt = f"{SYSTEM_PROMPT}\n\nConversation so far (may be empty):\n{conversation or '(none)'}\n\nRetrieved company context:\n{context}\n\nCurrent question: {question}\n\nAnswer with grounded citations like [S1]."
     try:
-        response = ChatGoogleGenerativeAI(model=CHAT_MODEL, temperature=0, max_retries=1).invoke(prompt)
+        response = ChatOpenAI(model=CHAT_MODEL, max_retries=1).invoke(prompt)
     except Exception as exc:
         message = str(exc)
         if any(marker in message.casefold() for marker in ("429", "resource_exhausted", "quota")):

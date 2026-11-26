@@ -35,7 +35,7 @@ try:
     vectorstore = _initialize_index()
 except Exception as exc:
     raise RuntimeError(
-        "Knowledge index initialization failed. Check GOOGLE_API_KEY and source files; "
+        "Knowledge index initialization failed. Check OPENAI_API_KEY and source files; "
         "run `python -m app.rag --sync` to rebuild the index. "
         f"Details: {exc}"
     ) from exc

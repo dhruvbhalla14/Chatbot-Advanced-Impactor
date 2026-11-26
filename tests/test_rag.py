@@ -61,6 +61,12 @@ class RagPipelineTests(unittest.TestCase):
         self.assertIn("Do not invent facts", SYSTEM_PROMPT)
         self.assertIn("[S1]", SYSTEM_PROMPT)
 
+    def test_old_embedding_manifest_is_not_reused(self):
+        from app.rag import EMBEDDING_MODEL, _manifest_uses_current_embeddings
+
+        self.assertFalse(_manifest_uses_current_embeddings({"embedding_provider": "google", "embedding_model": "models/gemini-embedding-001"}))
+        self.assertTrue(_manifest_uses_current_embeddings({"embedding_provider": "openai", "embedding_model": EMBEDDING_MODEL}))
+
     def test_malformed_cookie_docx_is_recovered_as_text(self):
         from pathlib import Path
         from app.rag import BASE_DIR, load_source
@@ -136,7 +142,7 @@ class RagPipelineTests(unittest.TestCase):
             def invoke(self, prompt):
                 raise RuntimeError("429 RESOURCE_EXHAUSTED quota exceeded")
 
-        with patch("app.rag.ChatGoogleGenerativeAI", LimitedModel):
+        with patch("app.rag.ChatOpenAI", LimitedModel):
             response = answer_question("What does CoachPlex do?", Store())
         self.assertTrue(response["degraded"])
         self.assertIn("[S1]", response["answer"])
